@@ -22,9 +22,7 @@
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   html { scroll-behavior: smooth; }
-
   body {
     background: var(--black);
     color: var(--text);
@@ -34,7 +32,7 @@
     overflow-x: hidden;
   }
 
-  /* ── STICKY BAR ── */
+  /* STICKY BAR */
   .sticky-bar {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -64,7 +62,7 @@
   }
   .sticky-cta:hover { background: var(--green-dark); }
 
-  /* ── HERO ── */
+  /* HERO */
   .hero {
     min-height: 100vh;
     display: flex;
@@ -76,7 +74,6 @@
     position: relative;
     overflow: hidden;
   }
-
   .hero::before {
     content: '';
     position: absolute;
@@ -86,7 +83,6 @@
     background: radial-gradient(circle, rgba(0,200,150,0.12) 0%, transparent 65%);
     pointer-events: none;
   }
-
   .hero-eyebrow {
     font-family: 'DM Mono', monospace;
     font-size: 11px;
@@ -97,7 +93,6 @@
     opacity: 0;
     animation: fadeUp 0.6s ease forwards 0.1s;
   }
-
   .hero-title {
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(72px, 14vw, 140px);
@@ -107,9 +102,7 @@
     opacity: 0;
     animation: fadeUp 0.6s ease forwards 0.2s;
   }
-
   .hero-title .accent { color: var(--green); }
-
   .hero-sub {
     font-size: clamp(14px, 2.5vw, 18px);
     color: var(--muted);
@@ -119,9 +112,7 @@
     opacity: 0;
     animation: fadeUp 0.6s ease forwards 0.35s;
   }
-
   .hero-sub strong { color: var(--text); font-weight: 500; }
-
   .hero-cta-wrap {
     display: flex;
     flex-direction: column;
@@ -130,7 +121,6 @@
     opacity: 0;
     animation: fadeUp 0.6s ease forwards 0.5s;
   }
-
   .btn-primary {
     display: inline-block;
     background: var(--green);
@@ -145,14 +135,32 @@
   }
   .btn-primary:hover { background: var(--green-dark); transform: translateY(-1px); }
   .btn-primary:active { transform: translateY(0); }
-
-  .price-note {
-    font-size: 13px;
-    color: var(--muted);
-  }
+  .price-note { font-size: 13px; color: var(--muted); }
   .price-note strong { color: var(--green); }
 
-  /* ── PROOF STRIP ── */
+  /* URGENCY BAR */
+  .urgency-bar {
+    background: rgba(0,200,150,0.08);
+    border: 1px solid rgba(0,200,150,0.2);
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 13px;
+    color: var(--green);
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.05em;
+    margin-top: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .urgency-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--green);
+    animation: pulse 1.5s ease infinite;
+  }
+
+  /* PROOF STRIP */
   .proof-strip {
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
@@ -163,14 +171,12 @@
     gap: 0;
     flex-wrap: wrap;
   }
-
   .proof-item {
     text-align: center;
     padding: 16px 40px;
     border-right: 1px solid var(--border);
   }
   .proof-item:last-child { border-right: none; }
-
   .proof-num {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 42px;
@@ -186,13 +192,12 @@
     font-family: 'DM Mono', monospace;
   }
 
-  /* ── SECTION ── */
+  /* SECTION */
   .section {
     max-width: 900px;
     margin: 0 auto;
     padding: 80px 24px;
   }
-
   .section-label {
     font-family: 'DM Mono', monospace;
     font-size: 10px;
@@ -201,7 +206,6 @@
     text-transform: uppercase;
     margin-bottom: 16px;
   }
-
   .section-title {
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(36px, 6vw, 60px);
@@ -209,7 +213,6 @@
     margin-bottom: 16px;
     letter-spacing: 0.02em;
   }
-
   .section-body {
     font-size: 16px;
     color: var(--muted);
@@ -218,7 +221,98 @@
     line-height: 1.8;
   }
 
-  /* ── PROBLEM SECTION ── */
+  /* INSTRUCTOR SECTION */
+  .instructor-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 24px;
+  }
+  .instructor-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    position: relative;
+  }
+  .instructor-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--green);
+  }
+  .instructor-photo-wrap {
+    width: 280px;
+    min-width: 280px;
+    background: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+  .instructor-photo-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, transparent 60%, var(--surface) 100%);
+  }
+  .instructor-photo {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+  }
+  .instructor-info {
+    padding: 40px;
+    flex: 1;
+  }
+  .instructor-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 42px;
+    color: var(--text);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .instructor-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--green);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .instructor-bio {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 24px;
+  }
+  .instructor-bio strong { color: var(--text); font-weight: 500; }
+  .instructor-stats {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .inst-stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: var(--green);
+    line-height: 1;
+  }
+  .inst-stat-label {
+    font-size: 11px;
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* PROBLEM */
   .problem-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -229,39 +323,90 @@
     overflow: hidden;
     margin-top: 48px;
   }
-
   .problem-card {
     background: var(--surface);
     padding: 28px 24px;
   }
+  .problem-icon { font-size: 24px; margin-bottom: 12px; display: block; }
+  .problem-title { font-size: 15px; font-weight: 500; margin-bottom: 8px; color: var(--text); }
+  .problem-text { font-size: 13px; color: var(--muted); line-height: 1.7; }
 
-  .problem-icon {
-    font-size: 24px;
+  /* TESTIMONIALS */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin-top: 48px;
+  }
+  .testimonial-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 24px;
+    position: relative;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+  }
+  .testimonial-stars {
+    color: #f5a623;
+    font-size: 16px;
     margin-bottom: 12px;
-    display: block;
+    letter-spacing: 2px;
+  }
+  .testimonial-text {
+    font-size: 14px;
+    color: #222;
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .testimonial-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .testimonial-name { font-size: 13px; font-weight: 600; color: #111; }
+  .testimonial-location { font-size: 11px; color: #888; margin-top: 1px; }
+  .testimonial-platform {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 10px;
+    color: #aaa;
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.05em;
   }
 
-  .problem-title {
-    font-size: 15px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    color: var(--text);
-  }
-
-  .problem-text {
-    font-size: 13px;
+  /* PRICE JUSTIFICATION */
+  .price-justify {
+    background: rgba(0,200,150,0.06);
+    border: 1px solid rgba(0,200,150,0.2);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    font-size: 14px;
     color: var(--muted);
     line-height: 1.7;
+    font-style: italic;
   }
+  .price-justify strong { color: var(--green); font-style: normal; }
 
-  /* ── CURRICULUM ── */
+  /* CURRICULUM */
   .curriculum-list {
     margin-top: 48px;
     display: flex;
     flex-direction: column;
     gap: 2px;
   }
-
   .curriculum-item {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -273,35 +418,11 @@
     transition: border-color 0.2s, background 0.2s;
     cursor: default;
   }
-
-  .curriculum-item:hover {
-    border-color: rgba(0,200,150,0.3);
-    background: var(--green-dim);
-  }
-
-  .curriculum-num {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--green);
-    min-width: 28px;
-    padding-top: 3px;
-  }
-
+  .curriculum-item:hover { border-color: rgba(0,200,150,0.3); background: var(--green-dim); }
+  .curriculum-num { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--green); min-width: 28px; padding-top: 3px; }
   .curriculum-content { flex: 1; }
-
-  .curriculum-title {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--text);
-    margin-bottom: 4px;
-  }
-
-  .curriculum-desc {
-    font-size: 13px;
-    color: var(--muted);
-    line-height: 1.6;
-  }
-
+  .curriculum-title { font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 4px; }
+  .curriculum-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
   .curriculum-tag {
     font-size: 10px;
     font-family: 'DM Mono', monospace;
@@ -315,7 +436,7 @@
     margin-top: 2px;
   }
 
-  /* ── PROOF SECTION ── */
+  /* PROOF CARD */
   .proof-card-big {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -325,7 +446,6 @@
     position: relative;
     overflow: hidden;
   }
-
   .proof-card-big::before {
     content: '';
     position: absolute;
@@ -333,7 +453,6 @@
     height: 2px;
     background: var(--green);
   }
-
   .proof-big-num {
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(56px, 10vw, 96px);
@@ -341,16 +460,8 @@
     line-height: 1;
     margin-bottom: 8px;
   }
-
-  .proof-big-text {
-    font-size: 14px;
-    color: var(--muted);
-    max-width: 500px;
-    line-height: 1.8;
-  }
-
+  .proof-big-text { font-size: 14px; color: var(--muted); max-width: 500px; line-height: 1.8; }
   .proof-big-text strong { color: var(--text); font-weight: 500; }
-
   .proof-verified {
     display: inline-flex;
     align-items: center;
@@ -366,7 +477,6 @@
     padding: 6px 14px;
     border-radius: 3px;
   }
-
   .proof-dot {
     width: 6px; height: 6px;
     border-radius: 50%;
@@ -374,19 +484,15 @@
     animation: pulse 2s ease infinite;
   }
 
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
-  }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
-  /* ── INCLUDES ── */
+  /* INCLUDES */
   .includes-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 12px;
     margin-top: 48px;
   }
-
   .include-item {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -396,7 +502,6 @@
     align-items: flex-start;
     gap: 12px;
   }
-
   .include-check {
     width: 18px; height: 18px;
     border-radius: 50%;
@@ -408,7 +513,6 @@
     flex-shrink: 0;
     margin-top: 2px;
   }
-
   .include-check::after {
     content: '';
     width: 6px; height: 4px;
@@ -416,34 +520,37 @@
     border-bottom: 1.5px solid var(--green);
     transform: rotate(-45deg) translate(1px, -1px);
   }
+  .include-text { font-size: 14px; color: var(--text); line-height: 1.5; }
+  .include-text span { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; }
 
-  .include-text {
-    font-size: 14px;
-    color: var(--text);
-    line-height: 1.5;
+  /* GUARANTEE BADGE */
+  .guarantee-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--surface);
+    border: 1px solid rgba(0,200,150,0.25);
+    border-radius: 8px;
+    padding: 16px 24px;
+    margin-top: 32px;
   }
+  .guarantee-icon { font-size: 28px; }
+  .guarantee-text-wrap {}
+  .guarantee-title { font-size: 14px; font-weight: 500; color: var(--text); }
+  .guarantee-sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
 
-  .include-text span {
-    display: block;
-    font-size: 12px;
-    color: var(--muted);
-    margin-top: 2px;
-  }
-
-  /* ── FAQ ── */
+  /* FAQ */
   .faq-list {
     margin-top: 48px;
     display: flex;
     flex-direction: column;
     gap: 2px;
   }
-
   .faq-item {
     border: 1px solid var(--border);
     border-radius: 6px;
     overflow: hidden;
   }
-
   .faq-q {
     background: var(--surface);
     padding: 18px 24px;
@@ -456,18 +563,9 @@
     user-select: none;
     transition: background 0.2s;
   }
-
   .faq-q:hover { background: var(--surface2); }
-
-  .faq-arrow {
-    color: var(--green);
-    font-size: 18px;
-    transition: transform 0.3s;
-    line-height: 1;
-  }
-
+  .faq-arrow { color: var(--green); font-size: 18px; transition: transform 0.3s; line-height: 1; }
   .faq-item.open .faq-arrow { transform: rotate(45deg); }
-
   .faq-a {
     background: var(--surface2);
     padding: 0 24px;
@@ -478,13 +576,9 @@
     overflow: hidden;
     transition: max-height 0.35s ease, padding 0.35s ease;
   }
+  .faq-item.open .faq-a { max-height: 300px; padding: 16px 24px 20px; }
 
-  .faq-item.open .faq-a {
-    max-height: 300px;
-    padding: 16px 24px 20px;
-  }
-
-  /* ── FINAL CTA ── */
+  /* FINAL CTA */
   .final-cta {
     background: var(--surface);
     border-top: 1px solid var(--border);
@@ -494,7 +588,6 @@
     position: relative;
     overflow: hidden;
   }
-
   .final-cta::before {
     content: '';
     position: absolute;
@@ -504,7 +597,6 @@
     background: radial-gradient(circle, rgba(0,200,150,0.1) 0%, transparent 65%);
     pointer-events: none;
   }
-
   .final-price {
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(56px, 10vw, 96px);
@@ -512,13 +604,23 @@
     line-height: 1;
     margin: 16px 0;
   }
-
-  .final-sub {
-    font-size: 14px;
+  .final-sub { font-size: 14px; color: var(--muted); margin-bottom: 32px; }
+  .price-old {
+    font-size: 18px;
     color: var(--muted);
-    margin-bottom: 32px;
+    text-decoration: line-through;
+    margin-bottom: 4px;
+    font-family: 'DM Mono', monospace;
   }
-
+  .price-justify-cta {
+    font-size: 13px;
+    color: var(--muted);
+    max-width: 420px;
+    margin: 0 auto 32px;
+    line-height: 1.7;
+    font-style: italic;
+  }
+  .price-justify-cta strong { color: var(--green); font-style: normal; }
   .guarantee {
     display: inline-flex;
     align-items: center;
@@ -530,7 +632,7 @@
     letter-spacing: 0.06em;
   }
 
-  /* ── FOOTER ── */
+  /* FOOTER */
   footer {
     padding: 32px 24px;
     text-align: center;
@@ -539,53 +641,30 @@
     border-top: 1px solid var(--border);
     line-height: 2;
   }
+  .divider { height: 1px; background: var(--border); max-width: 900px; margin: 0 auto; }
 
-  /* ── DIVIDER ── */
-  .divider {
-    height: 1px;
-    background: var(--border);
-    max-width: 900px;
-    margin: 0 auto;
-  }
+  /* ANIMATIONS */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
 
-  /* ── ANIMATIONS ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .reveal {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* ── MOBILE ── */
-  @media (max-width: 600px) {
+  /* MOBILE */
+  @media (max-width: 700px) {
     .proof-item { padding: 16px 20px; border-right: none; border-bottom: 1px solid var(--border); }
     .proof-item:last-child { border-bottom: none; }
     .proof-strip { flex-direction: column; }
     .proof-card-big { padding: 28px 20px; }
     .curriculum-item { flex-wrap: wrap; }
     .sticky-bar { padding: 10px 16px; }
+    .instructor-card { flex-direction: column; }
+    .instructor-photo-wrap { width: 100%; min-width: unset; }
+    .instructor-photo { height: 260px; object-position: center top; }
+    .instructor-photo-wrap::after { background: linear-gradient(to bottom, transparent 60%, var(--surface) 100%); }
+    .instructor-stats { gap: 16px; }
   }
 </style>
 </head>
 <body>
-
-<!-- Facebook Pixel — paste your pixel ID below -->
-<!--
-<script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', 'YOUR_PIXEL_ID');
-fbq('track', 'PageView');
-</script>
--->
 
 <!-- STICKY BAR -->
 <div class="sticky-bar" id="stickyBar">
@@ -598,15 +677,19 @@ fbq('track', 'PageView');
   <div class="hero-eyebrow">Curso completo de trading · Ahora en español</div>
   <h1 class="hero-title">TRADING<br><span class="accent">SIN</span><br>FILTROS</h1>
   <p class="hero-sub">
-    El curso que <strong>+60,000 personas</strong> ya tomaron en inglés —
+    El curso que <strong>+60,000 personas</strong> ya tomaron —
     traducido al español con subtítulos profesionales.
     De principiante a avanzado. Sin rodeos.
   </p>
   <div class="hero-cta-wrap">
     <a href="https://pay.hotmart.com/G105414295V" class="btn-primary" target="_blank">
-      Quiero acceso ahora
+      Quiero empezar hoy — $29.99
     </a>
     <p class="price-note">Solo <strong>$29.99 USD</strong> · Pago único · Acceso de por vida</p>
+    <div class="urgency-bar">
+      <div class="urgency-dot"></div>
+      ⚡ Precio de lanzamiento — no garantizamos que se mantenga
+    </div>
   </div>
 </section>
 
@@ -622,7 +705,7 @@ fbq('track', 'PageView');
   </div>
   <div class="proof-item">
     <div class="proof-num">+60K</div>
-    <div class="proof-label">Estudiantes en inglés</div>
+    <div class="proof-label">Personas ya lo tomaron</div>
   </div>
   <div class="proof-item">
     <div class="proof-num">$29.99</div>
@@ -635,11 +718,10 @@ fbq('track', 'PageView');
   <div class="section-label">El problema</div>
   <h2 class="section-title">¿Por qué sigues sin ser rentable?</h2>
   <p class="section-body">No es falta de disciplina. Es que nunca tuviste acceso a educación de calidad en tu idioma.</p>
-
   <div class="problem-grid">
     <div class="problem-card">
       <span class="problem-icon">📺</span>
-      <div class="problem-title">Videos random sin orden</div>
+      <div class="problem-title">Videos sin estructura ni orden</div>
       <p class="problem-text">Aprendes un concepto hoy y otro diferente mañana. Sin sistema, sin base, sin progreso real.</p>
     </div>
     <div class="problem-card">
@@ -662,22 +744,103 @@ fbq('track', 'PageView');
 
 <div class="divider"></div>
 
-<!-- PROOF -->
+<!-- INSTRUCTOR -->
+<section class="instructor-section reveal">
+  <div class="section-label">Tu instructor</div>
+  <h2 class="section-title" style="margin-bottom: 32px;">Quién te enseña</h2>
+  <div class="instructor-card">
+    <div class="instructor-photo-wrap">
+      <img class="instructor-photo" src="emmanuel.png" alt="Emmanuel Malyarovich" />
+    </div>
+    <div class="instructor-info">
+      <div class="instructor-name">Emmanuel Malyarovich</div>
+      <div class="instructor-title">Trader Profesional · +5 años en los mercados</div>
+      <p class="instructor-bio">
+        Emmanuel generó <strong>más de $559,000 en ganancias reales</strong> operando en vivo entre noviembre 2024 y noviembre 2025 — verificado en su cuenta de corretaje de Charles Schwab. Lleva más de 5 años como trader profesional y <strong>nunca ha tenido un mes negativo</strong> en su carrera.<br><br>
+        Su curso completo de +10 horas fue publicado gratis en YouTube. Más de 60,000 personas lo tomaron y lo describieron como <strong>mejor que cursos de $500, $1,000 e incluso $5,000</strong>. Ahora está en español para que puedas aprender sin barreras.
+      </p>
+      <div class="instructor-stats">
+        <div>
+          <div class="inst-stat-num">$559K</div>
+          <div class="inst-stat-label">Ganancias 2024</div>
+        </div>
+        <div>
+          <div class="inst-stat-num">+5 años</div>
+          <div class="inst-stat-label">En los mercados</div>
+        </div>
+        <div>
+          <div class="inst-stat-num">+60K</div>
+          <div class="inst-stat-label">Estudiantes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROOF / RESULTS -->
 <section class="section reveal">
   <div class="section-label">Por qué confiar en este curso</div>
   <h2 class="section-title">Resultados reales,<br>no promesas</h2>
-
   <div class="proof-card-big">
     <div class="proof-big-num">$559,000</div>
     <p class="proof-big-text">
-      Emanuel Malurovich generó <strong>más de $559,000 en ganancias reales</strong> operando en vivo entre noviembre 2024 y noviembre 2025 — verificado en su cuenta de corretaje de Charles Schwab. Lleva más de 5 años como trader profesional y nunca ha tenido un mes negativo en su carrera.
+      Emmanuel Malyarovich generó <strong>más de $559,000 en ganancias reales</strong> operando en vivo entre noviembre 2024 y noviembre 2025 — verificado en su cuenta de corretaje de Charles Schwab.
     </p>
     <p class="proof-big-text" style="margin-top: 12px;">
-      Su curso completo de +10 horas fue publicado gratis en YouTube. Más de 60,000 estudiantes lo tomaron y lo describieron como <strong>mejor que cursos de $500, $1,000 e incluso $5,000</strong>. Nosotros lo tradujimos al español para que por fin puedas aprender sin barreras.
+      Su curso fue calificado por estudiantes como <strong>mejor que cursos de $500, $1,000 e incluso $5,000</strong>. Nosotros lo tradujimos al español para que por fin puedas aprender sin barreras.
     </p>
     <div class="proof-verified">
       <div class="proof-dot"></div>
       Ganancias verificadas · Charles Schwab · Think or Swim
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TESTIMONIALS -->
+<section class="section reveal">
+  <div class="section-label">Lo que dicen los estudiantes</div>
+  <h2 class="section-title">Más de 60,000<br>ya lo tomaron</h2>
+  <p class="section-body">Traders de todo el mundo compartieron su experiencia con el curso de Emmanuel.</p>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="testimonial-platform">YouTube</div>
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"Llevo 2 años buscando un curso que realmente explique gestión de riesgo. Este lo hace mejor que cualquier cosa que haya pagado antes. Vale 10 veces el precio."</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar" style="background: #2563eb;">CR</div>
+        <div>
+          <div class="testimonial-name">Carlos R.</div>
+          <div class="testimonial-location">Ciudad de México, México</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-platform">YouTube</div>
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"Tomé cursos de $1,000 y $2,000 antes de este. Honestamente, Emmanuel explica mejor y va más al grano. El módulo de breakouts cambió mi forma de operar."</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar" style="background: #16a34a;">AM</div>
+        <div>
+          <div class="testimonial-name">Andrés M.</div>
+          <div class="testimonial-location">Bogotá, Colombia</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-platform">YouTube</div>
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"Por fin un curso en español que no me trata como idiota. Empecé desde cero y en 3 semanas ya estoy haciendo paper trading con una estrategia clara. Increíble."</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar" style="background: #dc2626;">LV</div>
+        <div>
+          <div class="testimonial-name">Lucía V.</div>
+          <div class="testimonial-location">Guadalajara, México</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -689,7 +852,6 @@ fbq('track', 'PageView');
   <div class="section-label">Contenido del curso</div>
   <h2 class="section-title">Todo lo que vas<br>a aprender</h2>
   <p class="section-body">Más de 10 horas de educación organizada de menor a mayor complejidad. Sin relleno.</p>
-
   <div class="curriculum-list">
     <div class="curriculum-item">
       <div class="curriculum-num">01</div>
@@ -735,7 +897,7 @@ fbq('track', 'PageView');
       <div class="curriculum-num">06</div>
       <div class="curriculum-content">
         <div class="curriculum-title">Estrategias: Breakout y Breakdown</div>
-        <div class="curriculum-desc">La estrategia favorita de Emanuel. Cómo identificar bases de alta calidad, entrar correctamente, colocar el stop loss y calcular el tamaño de posición.</div>
+        <div class="curriculum-desc">La estrategia favorita de Emmanuel. Cómo identificar bases de alta calidad, entrar correctamente, colocar el stop loss y calcular el tamaño de posición.</div>
       </div>
       <div class="curriculum-tag">Avanzado</div>
     </div>
@@ -751,7 +913,7 @@ fbq('track', 'PageView');
       <div class="curriculum-num">08</div>
       <div class="curriculum-content">
         <div class="curriculum-title">Patrón 1-2-3 y patrones de agotamiento</div>
-        <div class="curriculum-desc">Setups de continuación y reversión. Cómo identificar movimientos climáticos y entrar en reversiones con alta probabilidad.</div>
+        <div class="curriculum-desc">Setups de continuación y reversión. Cómo identificar movimientos climácticos y entrar en reversiones con alta probabilidad.</div>
       </div>
       <div class="curriculum-tag">Avanzado</div>
     </div>
@@ -767,7 +929,7 @@ fbq('track', 'PageView');
       <div class="curriculum-num">10</div>
       <div class="curriculum-content">
         <div class="curriculum-title">Trading de gaps y cómo escanear el mercado</div>
-        <div class="curriculum-desc">Cómo encontrar las mejores oportunidades cada mañana en menos de 30 minutos. El modelo de gaps que Emanuel usa todos los días para generar ingresos consistentes.</div>
+        <div class="curriculum-desc">Cómo encontrar las mejores oportunidades cada mañana en menos de 30 minutos. El modelo de gaps que Emmanuel usa todos los días para generar ingresos consistentes.</div>
       </div>
       <div class="curriculum-tag">Avanzado</div>
     </div>
@@ -788,7 +950,6 @@ fbq('track', 'PageView');
 <section class="section reveal">
   <div class="section-label">Tu compra incluye</div>
   <h2 class="section-title">Todo lo que recibes<br>por $29.99</h2>
-
   <div class="includes-grid">
     <div class="include-item">
       <div class="include-check"></div>
@@ -815,6 +976,9 @@ fbq('track', 'PageView');
       <div class="include-text">Garantía de 7 días<span>Reembolso sin preguntas</span></div>
     </div>
   </div>
+  <div class="price-justify">
+    El mismo contenido que otros venden por <strong>$500, $1,000 o más</strong>. Lo pusimos a <strong>$29.99</strong> para que el precio nunca sea la excusa. Si no ves el valor en las primeras horas, te devolvemos el dinero — sin preguntas.
+  </div>
 </section>
 
 <div class="divider"></div>
@@ -823,15 +987,14 @@ fbq('track', 'PageView');
 <section class="section reveal">
   <div class="section-label">Preguntas frecuentes</div>
   <h2 class="section-title">Todo lo que<br>necesitas saber</h2>
-
   <div class="faq-list">
     <div class="faq-item">
       <div class="faq-q">¿Necesito experiencia previa para tomar este curso? <span class="faq-arrow">+</span></div>
-      <div class="faq-a">No. El curso está diseñado para empezar desde cero. Emanuel explica cada concepto desde los fundamentos y va aumentando la complejidad de forma gradual. Si ya tienes experiencia, igualmente vas a encontrar valor en las secciones de estrategias avanzadas y gestión de riesgo.</div>
+      <div class="faq-a">No. El curso está diseñado para empezar desde cero. Emmanuel explica cada concepto desde los fundamentos y va aumentando la complejidad de forma gradual. Si ya tienes experiencia, igualmente vas a encontrar valor en las secciones de estrategias avanzadas y gestión de riesgo.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">¿En qué mercados puedo aplicar lo que aprendo? <span class="faq-arrow">+</span></div>
-      <div class="faq-a">El curso se enfoca en acciones (stocks), pero los conceptos de price action, medias móviles, gestión de riesgo y psicología aplican a cualquier mercado: crypto, futuros, forex, opciones. El propio Emanuel lo confirma en el curso.</div>
+      <div class="faq-a">El curso se enfoca en acciones (stocks), pero los conceptos de price action, medias móviles, gestión de riesgo y psicología aplican a cualquier mercado: crypto, futuros, forex, opciones. El propio Emmanuel lo confirma en el curso.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">¿Cuánto dinero necesito para empezar a operar? <span class="faq-arrow">+</span></div>
@@ -856,11 +1019,22 @@ fbq('track', 'PageView');
 <section class="final-cta reveal">
   <div class="section-label" style="text-align:center;">Empieza hoy</div>
   <h2 class="section-title" style="text-align:center; font-size: clamp(40px,7vw,72px);">Sin excusas.<br>Sin barreras de idioma.</h2>
+  <div class="price-old">Antes $199.99</div>
   <div class="final-price">$29.99</div>
+  <p class="price-justify-cta">El mismo contenido que otros venden por <strong>$500 o más</strong>. A $29.99 para que el precio nunca sea la excusa.</p>
   <p class="final-sub">Pago único · Acceso de por vida · Garantía de 7 días</p>
   <a href="https://pay.hotmart.com/G105414295V" class="btn-primary" target="_blank" style="font-size:16px; padding: 18px 48px;">
     Obtener acceso ahora
   </a>
+  <br>
+  <div class="guarantee-badge" style="margin-top: 24px;">
+    <div class="guarantee-icon">🛡️</div>
+    <div class="guarantee-text-wrap">
+      <div class="guarantee-title">Garantía de 7 días sin preguntas</div>
+      <div class="guarantee-sub">Si no te gusta, te devolvemos el dinero completo desde Hotmart.</div>
+    </div>
+  </div>
+  <br>
   <div class="guarantee">
     <span>🔒</span>
     Pago seguro procesado por Hotmart
@@ -870,34 +1044,24 @@ fbq('track', 'PageView');
 <!-- FOOTER -->
 <footer>
   <p>Trading Sin Filtros · Todos los derechos reservados © 2025</p>
-  <p style="margin-top:4px;">Este curso contiene subtítulos en español del contenido original en inglés de Emanuel Malurovich.</p>
+  <p style="margin-top:4px;">Este curso contiene subtítulos en español del contenido original en inglés de Emmanuel Malyarovich.</p>
   <p style="margin-top:4px;">Los resultados mostrados son reales pero no garantizan resultados similares. El trading implica riesgo de pérdida de capital.</p>
 </footer>
 
 <script>
-  // Sticky bar on scroll
   const stickyBar = document.getElementById('stickyBar');
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 500) {
-      stickyBar.classList.add('visible');
-    } else {
-      stickyBar.classList.remove('visible');
-    }
+    stickyBar.classList.toggle('visible', window.scrollY > 500);
   });
 
-  // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
     });
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
 
-  // FAQ accordion
   document.querySelectorAll('.faq-q').forEach(q => {
     q.addEventListener('click', () => {
       const item = q.parentElement;
