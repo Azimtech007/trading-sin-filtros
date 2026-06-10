@@ -805,15 +805,7 @@ footer p{font-family:var(--mono);font-size:.72rem;color:var(--muted);line-height
   gsap.to('#progress',{width:'100%',ease:'none',
     scrollTrigger:{trigger:document.body,start:'top top',end:'max',scrub:.3}});
 
-  /* ================= velocity skew on whole page ================= */
-  const skewTo=gsap.quickTo('#page','skewY',{duration:.5,ease:'power3'});
-  ScrollTrigger.create({
-    onUpdate(self){
-      const v=gsap.utils.clamp(-6,6,self.getVelocity()/-350);
-      skewTo(v);
-      if(Math.abs(v)<.05)skewTo(0);
-    }
-  });
+  /* ================= (velocity skew removed per request) ================= */
 
   /* ================= ticker: velocity-reactive loop ================= */
   const tickerTween=gsap.to('#ticker',{xPercent:-50,repeat:-1,duration:26,ease:'none'});
