@@ -5,324 +5,979 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trading Sin Filtros — El Curso Completo en Español</title>
 <meta name="description" content="El curso de trading más completo de YouTube — ahora traducido al español. +10 horas. Acceso de por vida. Solo $29.99.">
+
+<!-- Meta Pixel -->
 <script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '749807248158867');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=749807248158867&ev=PageView&noscript=1"/></noscript>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-  :root{--green:#00c896;--green-dark:#00a07a;--green-dim:rgba(0,200,150,0.08);--black:#080808;--surface:#101010;--surface2:#161616;--border:rgba(255,255,255,0.07);--text:#f0f0f0;--muted:#666;--muted2:#444}
-  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{background:var(--black);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden}
-  .sticky-bar{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,8,8,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;transform:translateY(-100%);transition:transform 0.3s ease}
-  .sticky-bar.visible{transform:translateY(0)}
-  .sticky-logo{font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--green);letter-spacing:0.05em}
-  .sticky-cta{background:var(--green);color:#000;font-size:13px;font-weight:500;padding:8px 20px;border-radius:4px;text-decoration:none;white-space:nowrap;transition:background 0.2s}
-  .sticky-cta:hover{background:var(--green-dark)}
-  .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px 24px 60px;position:relative;overflow:hidden}
-  .hero::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(0,200,150,0.12) 0%,transparent 65%);pointer-events:none}
-  .hero-eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.2em;color:var(--green);text-transform:uppercase;margin-bottom:24px;opacity:0;animation:fadeUp 0.6s ease forwards 0.1s}
-  .hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(72px,14vw,140px);line-height:0.92;letter-spacing:0.02em;margin-bottom:8px;opacity:0;animation:fadeUp 0.6s ease forwards 0.2s}
-  .hero-title .accent{color:var(--green)}
-  .hero-sub{font-size:clamp(14px,2.5vw,18px);color:var(--muted);max-width:520px;margin:16px auto 40px;font-weight:300;opacity:0;animation:fadeUp 0.6s ease forwards 0.35s}
-  .hero-sub strong{color:var(--text);font-weight:500}
-  .hero-cta-wrap{display:flex;flex-direction:column;align-items:center;gap:12px;opacity:0;animation:fadeUp 0.6s ease forwards 0.5s}
-  .btn-primary{display:inline-block;background:var(--green);color:#000;font-size:15px;font-weight:500;padding:16px 40px;border-radius:4px;text-decoration:none;letter-spacing:0.02em;transition:background 0.2s,transform 0.15s}
-  .btn-primary:hover{background:var(--green-dark);transform:translateY(-1px)}
-  .price-note{font-size:13px;color:var(--muted)}
-  .price-note strong{color:var(--green)}
-  .urgency-bar{background:rgba(0,200,150,0.08);border:1px solid rgba(0,200,150,0.2);border-radius:4px;padding:10px 20px;font-size:13px;color:var(--green);font-family:'DM Mono',monospace;letter-spacing:0.05em;margin-top:8px;display:inline-flex;align-items:center;gap:8px}
-  .urgency-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 1.5s ease infinite}
-  .proof-strip{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--surface);padding:32px 24px;display:flex;justify-content:center;gap:0;flex-wrap:wrap}
-  .proof-item{text-align:center;padding:16px 40px;border-right:1px solid var(--border)}
-  .proof-item:last-child{border-right:none}
-  .proof-num{font-family:'Bebas Neue',sans-serif;font-size:42px;color:var(--green);line-height:1}
-  .proof-label{font-size:11px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-top:4px;font-family:'DM Mono',monospace}
-  .section{max-width:900px;margin:0 auto;padding:80px 24px}
-  .section-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:var(--green);text-transform:uppercase;margin-bottom:16px}
-  .section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,6vw,60px);line-height:1;margin-bottom:16px;letter-spacing:0.02em}
-  .section-body{font-size:16px;color:var(--muted);max-width:600px;font-weight:300;line-height:1.8}
-  .instructor-section{max-width:900px;margin:0 auto;padding:80px 24px}
-  .instructor-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;display:flex;align-items:stretch;position:relative}
-  .instructor-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--green)}
-  .instructor-photo-wrap{width:280px;min-width:280px;background:linear-gradient(135deg,#0a0a0a 0%,#111 100%);display:flex;align-items:flex-end;justify-content:center;overflow:hidden;position:relative}
-  .instructor-photo-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,transparent 60%,var(--surface) 100%)}
-  .instructor-photo{width:100%;height:340px;object-fit:cover;object-position:top center;display:block}
-  .instructor-info{padding:40px;flex:1}
-  .instructor-name{font-family:'Bebas Neue',sans-serif;font-size:42px;color:var(--text);line-height:1;margin-bottom:4px}
-  .instructor-title{font-family:'DM Mono',monospace;font-size:11px;color:var(--green);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:20px}
-  .instructor-bio{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:24px}
-  .instructor-bio strong{color:var(--text);font-weight:500}
-  .instructor-stats{display:flex;gap:24px;flex-wrap:wrap}
-  .inst-stat-num{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--green);line-height:1}
-  .inst-stat-label{font-size:11px;color:var(--muted);font-family:'DM Mono',monospace;letter-spacing:0.08em;text-transform:uppercase}
-  .problem-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-top:48px}
-  .problem-card{background:var(--surface);padding:28px 24px}
-  .problem-icon{font-size:24px;margin-bottom:12px;display:block}
-  .problem-title{font-size:15px;font-weight:500;margin-bottom:8px;color:var(--text)}
-  .problem-text{font-size:13px;color:var(--muted);line-height:1.7}
-  .testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:48px}
-  .testimonial-card{background:#fff;border-radius:10px;padding:24px;position:relative;box-shadow:0 4px 24px rgba(0,0,0,0.3)}
-  .testimonial-stars{color:#f5a623;font-size:16px;margin-bottom:12px;letter-spacing:2px}
-  .testimonial-text{font-size:14px;color:#222;line-height:1.7;margin-bottom:16px}
-  .testimonial-author{display:flex;align-items:center;gap:10px}
-  .testimonial-avatar{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:#fff;flex-shrink:0}
-  .testimonial-name{font-size:13px;font-weight:600;color:#111}
-  .testimonial-location{font-size:11px;color:#888;margin-top:1px}
-  .testimonial-platform{position:absolute;top:16px;right:16px;font-size:10px;color:#aaa;font-family:'DM Mono',monospace;letter-spacing:0.05em}
-  .price-justify{background:rgba(0,200,150,0.06);border:1px solid rgba(0,200,150,0.2);border-radius:8px;padding:20px 24px;margin-top:24px;font-size:14px;color:var(--muted);line-height:1.7;font-style:italic}
-  .price-justify strong{color:var(--green);font-style:normal}
-  .curriculum-list{margin-top:48px;display:flex;flex-direction:column;gap:2px}
-  .curriculum-item{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:18px 24px;display:flex;align-items:flex-start;gap:16px;transition:border-color 0.2s,background 0.2s;cursor:default}
-  .curriculum-item:hover{border-color:rgba(0,200,150,0.3);background:var(--green-dim)}
-  .curriculum-num{font-family:'DM Mono',monospace;font-size:11px;color:var(--green);min-width:28px;padding-top:3px}
-  .curriculum-content{flex:1}
-  .curriculum-title{font-size:15px;font-weight:500;color:var(--text);margin-bottom:4px}
-  .curriculum-desc{font-size:13px;color:var(--muted);line-height:1.6}
-  .curriculum-tag{font-size:10px;font-family:'DM Mono',monospace;color:var(--green);background:var(--green-dim);border:1px solid rgba(0,200,150,0.2);padding:3px 8px;border-radius:3px;white-space:nowrap;align-self:flex-start;margin-top:2px}
-  .proof-card-big{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:40px;margin-top:48px;position:relative;overflow:hidden}
-  .proof-card-big::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--green)}
-  .proof-big-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(56px,10vw,96px);color:var(--green);line-height:1;margin-bottom:8px}
-  .proof-big-text{font-size:14px;color:var(--muted);max-width:500px;line-height:1.8}
-  .proof-big-text strong{color:var(--text);font-weight:500}
-  .proof-verified{display:inline-flex;align-items:center;gap:6px;font-family:'DM Mono',monospace;font-size:10px;color:var(--green);letter-spacing:0.1em;text-transform:uppercase;margin-top:20px;background:var(--green-dim);border:1px solid rgba(0,200,150,0.2);padding:6px 14px;border-radius:3px}
-  .proof-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s ease infinite}
-  @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
-  .includes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:48px}
-  .include-item{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:20px;display:flex;align-items:flex-start;gap:12px}
-  .include-check{width:18px;height:18px;border-radius:50%;background:var(--green-dim);border:1px solid rgba(0,200,150,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
-  .include-check::after{content:'';width:6px;height:4px;border-left:1.5px solid var(--green);border-bottom:1.5px solid var(--green);transform:rotate(-45deg) translate(1px,-1px)}
-  .include-text{font-size:14px;color:var(--text);line-height:1.5}
-  .include-text span{display:block;font-size:12px;color:var(--muted);margin-top:2px}
-  .guarantee-badge{display:inline-flex;align-items:center;gap:12px;background:var(--surface);border:1px solid rgba(0,200,150,0.25);border-radius:8px;padding:16px 24px;margin-top:32px}
-  .guarantee-icon{font-size:28px}
-  .guarantee-title{font-size:14px;font-weight:500;color:var(--text)}
-  .guarantee-sub{font-size:12px;color:var(--muted);margin-top:2px}
-  .faq-list{margin-top:48px;display:flex;flex-direction:column;gap:2px}
-  .faq-item{border:1px solid var(--border);border-radius:6px;overflow:hidden}
-  .faq-q{background:var(--surface);padding:18px 24px;font-size:15px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none;transition:background 0.2s}
-  .faq-q:hover{background:var(--surface2)}
-  .faq-arrow{color:var(--green);font-size:18px;transition:transform 0.3s;line-height:1}
-  .faq-item.open .faq-arrow{transform:rotate(45deg)}
-  .faq-a{background:var(--surface2);padding:0 24px;font-size:14px;color:var(--muted);line-height:1.8;max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.35s ease}
-  .faq-item.open .faq-a{max-height:300px;padding:16px 24px 20px}
-  .final-cta{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);text-align:center;padding:80px 24px;position:relative;overflow:hidden}
-  .final-cta::before{content:'';position:absolute;bottom:-300px;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(0,200,150,0.1) 0%,transparent 65%);pointer-events:none}
-  .final-price{font-family:'Bebas Neue',sans-serif;font-size:clamp(56px,10vw,96px);color:var(--green);line-height:1;margin:16px 0}
-  .final-sub{font-size:14px;color:var(--muted);margin-bottom:32px}
-  .price-old{font-size:18px;color:var(--muted);text-decoration:line-through;margin-bottom:4px;font-family:'DM Mono',monospace}
-  .price-justify-cta{font-size:13px;color:var(--muted);max-width:420px;margin:0 auto 32px;line-height:1.7;font-style:italic}
-  .price-justify-cta strong{color:var(--green);font-style:normal}
-  .guarantee{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);margin-top:16px;font-family:'DM Mono',monospace;letter-spacing:0.06em}
-  footer{padding:32px 24px;text-align:center;font-size:12px;color:var(--muted2);border-top:1px solid var(--border);line-height:2}
-  .divider{height:1px;background:var(--border);max-width:900px;margin:0 auto}
-  @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-  .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
-  .reveal.visible{opacity:1;transform:translateY(0)}
-  @media(max-width:700px){
-    .proof-item{padding:16px 20px;border-right:none;border-bottom:1px solid var(--border)}
-    .proof-item:last-child{border-bottom:none}
-    .proof-strip{flex-direction:column}
-    .proof-card-big{padding:28px 20px}
-    .curriculum-item{flex-wrap:wrap}
-    .sticky-bar{padding:10px 16px}
-    .instructor-card{flex-direction:column}
-    .instructor-photo-wrap{width:100%;min-width:unset}
-    .instructor-photo{height:260px;object-position:center top}
-    .instructor-photo-wrap::after{background:linear-gradient(to bottom,transparent 60%,var(--surface) 100%)}
-    .instructor-stats{gap:16px}
-  }
+:root{
+  --ink:#070B12;
+  --panel:#0D1320;
+  --panel-2:#121C2E;
+  --line:#1B2638;
+  --text:#E9EEF6;
+  --muted:#8E99AC;
+  --up:#16C784;
+  --up-bright:#37E8A4;
+  --up-dim:rgba(22,199,132,.12);
+  --down:#EA3943;
+  --down-dim:rgba(234,57,67,.12);
+  --amber:#F7B32B;
+  --amber-dim:rgba(247,179,43,.12);
+  --display:'Archivo Black',sans-serif;
+  --body:'Archivo',sans-serif;
+  --mono:'IBM Plex Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:auto}
+body{
+  background:var(--ink);color:var(--text);font-family:var(--body);
+  line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--up);color:var(--ink)}
+a{color:inherit}
+img{max-width:100%;display:block}
+
+/* ============ PRELOADER ============ */
+#loader{
+  position:fixed;inset:0;z-index:2000;background:var(--ink);
+  display:flex;flex-direction:column;justify-content:center;align-items:center;gap:18px;
+}
+#loader .l-logo{font-family:var(--display);font-size:clamp(1.2rem,4vw,2rem);letter-spacing:.06em;text-transform:uppercase;opacity:0}
+#loader .l-price{font-family:var(--mono);font-size:clamp(2rem,8vw,4rem);font-weight:700;color:var(--up);text-shadow:0 0 40px rgba(22,199,132,.5)}
+#loader .l-bar{width:min(280px,60vw);height:2px;background:var(--line);overflow:hidden;border-radius:2px}
+#loader .l-bar i{display:block;height:100%;width:0%;background:var(--up);box-shadow:0 0 12px var(--up)}
+#loader .l-tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.3em;color:var(--muted);text-transform:uppercase}
+
+/* ============ cursor glow (desktop) ============ */
+#cursor-glow{
+  position:fixed;width:480px;height:480px;border-radius:50%;pointer-events:none;z-index:1;
+  background:radial-gradient(circle,rgba(22,199,132,.07) 0%,transparent 60%);
+  transform:translate(-50%,-50%);left:-999px;top:-999px;
+}
+
+/* ============ grid bg ============ */
+.grid-bg{
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(27,38,56,.32) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(27,38,56,.32) 1px,transparent 1px);
+  background-size:48px 48px;
+}
+
+/* ============ progress ============ */
+#progress{
+  position:fixed;top:0;left:0;height:3px;width:0%;z-index:1500;
+  background:linear-gradient(90deg,var(--up),var(--up-bright));
+  box-shadow:0 0 14px rgba(22,199,132,.8);
+}
+
+/* ============ nav ============ */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1400;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:14px clamp(16px,4vw,48px);
+  background:rgba(7,11,18,.7);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+  transform:translateY(-100%);
+}
+.nav-logo{font-family:var(--mono);font-weight:700;font-size:.85rem;letter-spacing:.14em;display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-logo .dot{width:8px;height:8px;border-radius:50%;background:var(--up);box-shadow:0 0 10px var(--up);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.nav-cta{
+  font-family:var(--mono);font-size:.78rem;font-weight:600;text-decoration:none;color:var(--ink);
+  background:var(--up);padding:10px 18px;border-radius:6px;transition:transform .2s,box-shadow .2s;
+}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(22,199,132,.45)}
+
+/* ============ smooth-scroll skew wrapper ============ */
+#page{position:relative;z-index:2;will-change:transform}
+
+/* ============ hero ============ */
+.hero{
+  position:relative;min-height:100svh;display:flex;flex-direction:column;
+  justify-content:center;align-items:center;text-align:center;padding:120px 20px 90px;overflow:hidden;
+}
+#candles{position:absolute;inset:0;width:100%;height:100%;z-index:-1;opacity:.55}
+.hero::after{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse 70% 55% at 50% 60%,transparent 0%,var(--ink) 96%)}
+.hero-inner{will-change:transform,opacity}
+.hero-badge{
+  display:inline-block;font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--up);border:1px solid rgba(22,199,132,.35);background:var(--up-dim);
+  padding:8px 16px;border-radius:100px;margin-bottom:28px;opacity:0;
+}
+.hero h1{
+  font-family:var(--display);font-size:clamp(2.7rem,10vw,7.2rem);
+  line-height:.93;letter-spacing:-.01em;text-transform:uppercase;margin-bottom:8px;
+}
+.hero h1 .char{display:inline-block;will-change:transform}
+.hero h1 .ln3 .char{
+  background:linear-gradient(180deg,var(--up-bright),var(--up));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero h1 .ln3{filter:drop-shadow(0 0 28px rgba(22,199,132,.35))}
+.hero-sub{max-width:640px;color:var(--muted);font-size:clamp(1rem,2.2vw,1.2rem);margin:22px auto 36px;opacity:0}
+.hero-sub strong{color:var(--text)}
+.cta-main{
+  position:relative;display:inline-flex;align-items:center;gap:12px;
+  font-weight:800;font-size:1.05rem;text-decoration:none;color:var(--ink);
+  background:linear-gradient(180deg,var(--up-bright),var(--up));
+  padding:18px 38px;border-radius:10px;box-shadow:0 8px 40px rgba(22,199,132,.35);
+  transition:transform .25s cubic-bezier(.2,.9,.3,1),box-shadow .25s;overflow:hidden;
+}
+.hero .cta-main{opacity:0}
+.cta-main::before{
+  content:'';position:absolute;top:0;left:-80%;width:50%;height:100%;
+  background:linear-gradient(110deg,transparent,rgba(255,255,255,.5),transparent);
+  transform:skewX(-20deg);animation:shine 3.2s ease-in-out 2.4s infinite;
+}
+@keyframes shine{0%{left:-80%}45%,100%{left:130%}}
+.cta-main:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 14px 56px rgba(22,199,132,.55)}
+.cta-main .arrow{transition:transform .25s}
+.cta-main:hover .arrow{transform:translateX(5px)}
+.hero-note{font-family:var(--mono);font-size:.78rem;color:var(--muted);margin-top:18px;opacity:0}
+.hero-flash{
+  display:inline-block;font-family:var(--mono);font-size:.74rem;color:var(--amber);margin-top:12px;
+  background:var(--amber-dim);border:1px solid rgba(247,179,43,.3);padding:7px 14px;border-radius:100px;opacity:0;
+}
+.scroll-hint{
+  position:absolute;bottom:26px;left:50%;transform:translateX(-50%);
+  font-family:var(--mono);font-size:.64rem;letter-spacing:.3em;color:var(--muted);text-transform:uppercase;
+  display:flex;flex-direction:column;align-items:center;gap:10px;opacity:0;
+}
+.scroll-hint i{width:1px;height:42px;background:linear-gradient(var(--up),transparent);display:block;animation:drip 1.6s ease-in-out infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ============ ticker ============ */
+.ticker-wrap{position:relative;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel);overflow:hidden;padding:14px 0}
+.ticker{display:flex;width:max-content}
+.ticker span{font-family:var(--mono);font-size:.82rem;font-weight:500;letter-spacing:.06em;padding:0 28px;white-space:nowrap;color:var(--muted)}
+.ticker .up{color:var(--up)}
+.ticker .amber{color:var(--amber)}
+
+/* ============ giant scrolling strips ============ */
+.strip{overflow:hidden;padding:clamp(28px,4vw,48px) 0;border-bottom:1px solid var(--line)}
+.strip-track{display:flex;width:max-content;will-change:transform}
+.strip-track b{
+  font-family:var(--display);font-size:clamp(3rem,9vw,7rem);text-transform:uppercase;
+  white-space:nowrap;padding:0 30px;line-height:1;
+  color:transparent;-webkit-text-stroke:1.5px var(--line);
+}
+.strip-track b.solid{color:var(--up);-webkit-text-stroke:0;text-shadow:0 0 60px rgba(22,199,132,.25)}
+
+/* ============ sections ============ */
+section{position:relative;padding:clamp(80px,11vw,150px) clamp(18px,5vw,48px)}
+.wrap{max-width:1100px;margin:0 auto}
+.eyebrow{
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--up);margin-bottom:16px;display:flex;align-items:center;gap:10px;
+}
+.eyebrow::before{content:'';width:28px;height:1px;background:var(--up)}
+h2{
+  font-family:var(--display);font-size:clamp(1.9rem,5vw,3.4rem);
+  line-height:1.04;text-transform:uppercase;margin-bottom:18px;
+}
+h2 .char{display:inline-block;will-change:transform}
+h2 .ghost{color:transparent;-webkit-text-stroke:1.5px var(--up)}
+.section-sub{color:var(--muted);max-width:620px;font-size:1.05rem;margin-bottom:48px}
+.fill-text .word{color:rgba(142,153,172,.25);transition:none}
+
+/* ============ stats ============ */
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.stat{background:var(--panel);padding:38px 22px;text-align:center;position:relative;overflow:hidden}
+.stat::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--up);transform:scaleX(0);transform-origin:left}
+.stat b{display:block;font-family:var(--mono);font-weight:700;font-size:clamp(1.5rem,3.4vw,2.4rem);color:var(--up);margin-bottom:6px}
+.stat i{font-style:normal;font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+/* ============ problem ============ */
+.cards-4{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;perspective:1200px}
+.p-card{
+  background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:30px 26px;
+  transition:border-color .35s,box-shadow .35s;will-change:transform;
+}
+.p-card:hover{border-color:rgba(234,57,67,.5);box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.p-card .tick{
+  font-family:var(--mono);font-size:.7rem;font-weight:600;letter-spacing:.1em;color:var(--down);
+  background:var(--down-dim);border:1px solid rgba(234,57,67,.3);padding:4px 10px;border-radius:5px;
+  display:inline-block;margin-bottom:18px;
+}
+.p-card h3{font-size:1.08rem;font-weight:700;margin-bottom:10px}
+.p-card p{color:var(--muted);font-size:.93rem}
+
+/* ============ instructor ============ */
+.inst{display:grid;grid-template-columns:340px 1fr;gap:48px;align-items:center}
+.inst-photo{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--panel)}
+.inst-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:saturate(.9) contrast(1.05);will-change:transform}
+.inst-photo .badge{
+  position:absolute;bottom:14px;left:14px;right:14px;background:rgba(7,11,18,.85);backdrop-filter:blur(8px);
+  border:1px solid var(--line);border-radius:10px;padding:12px 16px;
+  font-family:var(--mono);font-size:.72rem;color:var(--up);letter-spacing:.06em;
+}
+.inst-text p{color:var(--muted);margin-bottom:18px;font-size:1.05rem;line-height:1.75}
+.inst-text strong{color:var(--text)}
+.inst-stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+.chip{font-family:var(--mono);font-size:.78rem;font-weight:600;border:1px solid var(--line);background:var(--panel);border-radius:8px;padding:10px 16px}
+.chip b{color:var(--up);font-weight:700}
+
+/* ============ proof (pinned) ============ */
+.proof{
+  background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  text-align:center;overflow:hidden;min-height:100svh;display:flex;align-items:center;justify-content:center;
+}
+.proof-inner{max-width:900px;margin:0 auto}
+.proof .big{
+  font-family:var(--display);font-size:clamp(3.4rem,14vw,10rem);line-height:1;margin-bottom:30px;
+  color:transparent;-webkit-text-stroke:2px rgba(22,199,132,.4);will-change:transform;
+}
+.proof .big.lit{
+  background:linear-gradient(180deg,var(--up-bright) 10%,var(--up) 60%,#0C9E68);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-stroke:0;
+  filter:drop-shadow(0 0 50px rgba(22,199,132,.3));
+}
+.proof p{max-width:680px;margin:0 auto 16px;color:var(--muted);font-size:clamp(1rem,2.2vw,1.15rem);line-height:1.8}
+.proof strong{color:var(--text)}
+.proof .verify{
+  font-family:var(--mono);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--up);margin-top:30px;display:inline-flex;gap:10px;align-items:center;
+}
+
+/* ============ testimonials ============ */
+.t-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;perspective:1200px}
+.t-card{
+  background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:28px 26px;
+  display:flex;flex-direction:column;gap:16px;transition:border-color .35s;will-change:transform;
+}
+.t-card:hover{border-color:rgba(22,199,132,.45)}
+.t-top{display:flex;justify-content:space-between;align-items:center}
+.t-src{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+.t-stars{color:var(--amber);letter-spacing:.15em;font-size:.85rem}
+.t-card blockquote{font-size:.97rem;line-height:1.65}
+.t-who{display:flex;align-items:center;gap:12px;margin-top:auto}
+.t-av{
+  width:40px;height:40px;border-radius:50%;display:grid;place-items:center;
+  font-family:var(--mono);font-weight:700;font-size:.78rem;
+  background:var(--up-dim);color:var(--up);border:1px solid rgba(22,199,132,.35);
+}
+.t-who b{display:block;font-size:.92rem}
+.t-who span{font-size:.78rem;color:var(--muted)}
+
+/* ============ curriculum — horizontal scroll ============ */
+.curr{padding:0}
+.curr-head{padding:clamp(80px,11vw,150px) clamp(18px,5vw,48px) 30px}
+.curr-pin{overflow:hidden}
+.curr-track{display:flex;gap:22px;padding:30px clamp(18px,5vw,48px) 90px;width:max-content;will-change:transform}
+.m-card{
+  flex:none;width:min(420px,82vw);background:var(--panel);border:1px solid var(--line);border-radius:18px;
+  padding:34px 30px;display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden;
+}
+.m-card::after{
+  content:attr(data-num);position:absolute;right:-10px;bottom:-34px;
+  font-family:var(--display);font-size:8rem;line-height:1;color:transparent;
+  -webkit-text-stroke:1.5px rgba(27,38,56,.9);pointer-events:none;
+}
+.m-card .m-top{display:flex;justify-content:space-between;align-items:center}
+.m-num{font-family:var(--mono);font-weight:700;font-size:1rem;color:var(--up)}
+.m-card h3{font-size:1.25rem;font-weight:800;line-height:1.25}
+.m-card p{color:var(--muted);font-size:.93rem;line-height:1.6;position:relative;z-index:1}
+.lvl{
+  font-family:var(--mono);font-size:.66rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  padding:5px 11px;border-radius:5px;white-space:nowrap;
+}
+.lvl.beg{color:var(--up);background:var(--up-dim);border:1px solid rgba(22,199,132,.3)}
+.lvl.mid{color:#5EB0FF;background:rgba(94,176,255,.1);border:1px solid rgba(94,176,255,.3)}
+.lvl.adv{color:var(--amber);background:var(--amber-dim);border:1px solid rgba(247,179,43,.3)}
+.lvl.crit{color:var(--down);background:var(--down-dim);border:1px solid rgba(234,57,67,.3)}
+.curr-progress{height:2px;background:var(--line);margin:0 clamp(18px,5vw,48px);border-radius:2px;overflow:hidden}
+.curr-progress i{display:block;height:100%;width:0%;background:var(--up);box-shadow:0 0 10px var(--up)}
+.drag-hint{font-family:var(--mono);font-size:.68rem;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;padding:18px clamp(18px,5vw,48px) 0}
+
+/* ============ includes ============ */
+.inc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-bottom:36px}
+.inc{
+  display:flex;gap:16px;align-items:flex-start;background:var(--panel);
+  border:1px solid var(--line);border-radius:12px;padding:20px 22px;
+  transition:border-color .3s;will-change:transform;
+}
+.inc:hover{border-color:rgba(22,199,132,.4)}
+.inc .ok{
+  flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;
+  background:var(--up-dim);color:var(--up);font-weight:800;font-size:.8rem;border:1px solid rgba(22,199,132,.35);
+}
+.inc b{display:block;font-size:.97rem}
+.inc span{font-size:.84rem;color:var(--muted)}
+.inc-note{
+  background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--up);
+  border-radius:10px;padding:22px 26px;color:var(--muted);font-size:.98rem;
+}
+.inc-note strong{color:var(--text)}
+
+/* ============ FAQ ============ */
+.faq{max-width:780px;margin:0 auto}
+details{background:var(--panel);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden;transition:border-color .3s}
+details[open]{border-color:rgba(22,199,132,.4)}
+summary{cursor:pointer;list-style:none;padding:22px 26px;font-weight:700;font-size:1rem;display:flex;justify-content:space-between;align-items:center;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary .plus{flex:none;font-family:var(--mono);color:var(--up);font-size:1.2rem;transition:transform .3s}
+details[open] summary .plus{transform:rotate(45deg)}
+details .ans{padding:0 26px 24px;color:var(--muted);font-size:.95rem;line-height:1.7}
+
+/* ============ final ============ */
+.final{
+  text-align:center;min-height:100svh;display:flex;align-items:center;justify-content:center;
+  border-top:1px solid var(--line);position:relative;overflow:hidden;
+}
+.final::before{
+  content:'';position:absolute;left:50%;bottom:-30%;width:140vw;height:120%;transform:translateX(-50%);
+  background:radial-gradient(ellipse 50% 60% at 50% 100%,rgba(22,199,132,.22),transparent 70%);
+  pointer-events:none;
+}
+.price-row{display:flex;align-items:baseline;justify-content:center;gap:18px;margin:30px 0 12px}
+.price-old{
+  font-family:var(--mono);font-size:clamp(1.1rem,3vw,1.5rem);color:var(--muted);
+  text-decoration:line-through;text-decoration-color:var(--down);text-decoration-thickness:2px;
+}
+.price-now{
+  font-family:var(--display);font-size:clamp(3.6rem,11vw,7rem);line-height:1;color:var(--up);
+  text-shadow:0 0 50px rgba(22,199,132,.35);display:inline-block;will-change:transform;
+}
+.final p{color:var(--muted);max-width:560px;margin:0 auto 8px}
+.final strong{color:var(--text)}
+.final .terms{font-family:var(--mono);font-size:.78rem;margin:18px 0 34px}
+.guarantee{
+  display:inline-flex;align-items:center;gap:14px;margin-top:36px;background:var(--panel);
+  border:1px solid var(--line);border-radius:12px;padding:18px 26px;text-align:left;
+}
+.guarantee .shield{font-size:1.6rem}
+.guarantee b{display:block;font-size:.95rem}
+.guarantee span{font-size:.82rem;color:var(--muted)}
+.secure{font-family:var(--mono);font-size:.74rem;color:var(--muted);margin-top:22px}
+
+footer{border-top:1px solid var(--line);padding:36px clamp(18px,5vw,48px);text-align:center;position:relative;z-index:2;background:var(--ink)}
+footer p{font-family:var(--mono);font-size:.72rem;color:var(--muted);line-height:1.9;max-width:760px;margin:0 auto}
+
+/* generic anim targets */
+.a-up{opacity:0;transform:translateY(50px)}
+.a-left{opacity:0;transform:translateX(-60px)}
+.a-right{opacity:0;transform:translateX(60px)}
+.a-scale{opacity:0;transform:scale(.85)}
+
+@media(max-width:880px){
+  .inst{grid-template-columns:1fr;gap:30px}
+  .inst-photo{max-width:380px}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:480px){
+  .cta-main{width:100%;justify-content:center;padding:17px 20px;font-size:1rem}
+  .price-row{flex-direction:column;gap:6px;align-items:center}
+}
+@media(prefers-reduced-motion:reduce){
+  #loader,#cursor-glow,.scroll-hint{display:none!important}
+  nav{transform:none}
+  .a-up,.a-left,.a-right,.a-scale,.hero-badge,.hero-sub,.hero .cta-main,.hero-note,.hero-flash{opacity:1!important;transform:none!important}
+  .fill-text .word{color:var(--muted)!important}
+  #candles{display:none}
+}
+:focus-visible{outline:2px solid var(--up);outline-offset:3px;border-radius:6px}
 </style>
 </head>
 <body>
 
-<div class="sticky-bar" id="stickyBar">
-  <div class="sticky-logo">TRADING SIN FILTROS</div>
-  <a href="https://tradingfiltro.gumroad.com/l/nvabof?wanted=true" class="sticky-cta" target="_blank" onclick="fbq('track','InitiateCheckout');">Obtener acceso — $29.99</a>
+<!-- ============ PRELOADER ============ -->
+<div id="loader" aria-hidden="true">
+  <div class="l-logo">Trading Sin Filtros</div>
+  <div class="l-price" id="lPrice">$0</div>
+  <div class="l-bar"><i id="lBar"></i></div>
+  <div class="l-tag">Cargando mercado…</div>
 </div>
 
-<section class="hero">
-  <div class="hero-eyebrow">Curso completo de trading · Ahora en español</div>
-  <h1 class="hero-title">TRADING<br><span class="accent">SIN</span><br>FILTROS</h1>
-  <p class="hero-sub">El curso que <strong>+60,000 personas</strong> ya tomaron — traducido al español con subtítulos profesionales. De principiante a avanzado. Sin rodeos.</p>
-  <div class="hero-cta-wrap">
-    <a href="https://tradingfiltro.gumroad.com/l/nvabof?wanted=true" class="btn-primary" target="_blank" onclick="fbq('track','InitiateCheckout');">Quiero empezar hoy — $29.99</a>
-    <p class="price-note">Solo <strong>$29.99 USD</strong> · Pago único · Acceso de por vida</p>
-    <div class="urgency-bar"><div class="urgency-dot"></div>⚡ Precio de lanzamiento — no garantizamos que se mantenga</div>
-  </div>
-</section>
+<div id="cursor-glow" aria-hidden="true"></div>
+<div class="grid-bg" aria-hidden="true"></div>
+<div id="progress"></div>
 
-<div class="proof-strip">
-  <div class="proof-item"><div class="proof-num">$559K</div><div class="proof-label">Ganancias verificadas 2024</div></div>
-  <div class="proof-item"><div class="proof-num">+10 HRS</div><div class="proof-label">De contenido real</div></div>
-  <div class="proof-item"><div class="proof-num">+60K</div><div class="proof-label">Personas ya lo tomaron</div></div>
-  <div class="proof-item"><div class="proof-num">$29.99</div><div class="proof-label">Un solo pago</div></div>
+<nav>
+  <a class="nav-logo" href="#"><span class="dot"></span>TRADING SIN FILTROS</a>
+  <a class="nav-cta" href="https://tradingfiltro.gumroad.com/l/nvabof?wanted=true">Obtener acceso — $29.99</a>
+</nav>
+
+<div id="page">
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <canvas id="candles"></canvas>
+  <div class="hero-inner">
+    <div class="hero-badge">Curso completo de trading · Ahora en español</div>
+    <h1>
+      <span class="ln ln1">TRADING</span><br>
+      <span class="ln ln2">SIN</span> <span class="ln ln3">FILTROS</span>
+    </h1>
+    <p class="hero-sub">El curso que <strong>+60,000 personas</strong> ya tomaron — traducido al español con subtítulos profesionales. De principiante a avanzado. Sin rodeos.</p>
+    <a class="cta-main" href="https://tradingfiltro.gumroad.com/l/nvabof?wanted=true">Quiero empezar hoy — $29.99 <span class="arrow">→</span></a>
+    <p class="hero-note">Solo $29.99 USD · Pago único · Acceso de por vida</p>
+    <br><span class="hero-flash">⚡ Precio de lanzamiento — no garantizamos que se mantenga</span>
+  </div>
+  <div class="scroll-hint">Desliza<i></i></div>
+</header>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker" id="ticker">
+    <span class="up">▲ $559K GANANCIAS VERIFICADAS 2024</span>
+    <span>+60,000 ESTUDIANTES</span>
+    <span class="up">▲ +10 HRS DE CONTENIDO REAL</span>
+    <span class="amber">⚡ PRECIO DE LANZAMIENTO $29.99</span>
+    <span class="up">▲ VERIFICADO · CHARLES SCHWAB</span>
+    <span>ACCESO DE POR VIDA</span>
+    <span class="up">▲ $559K GANANCIAS VERIFICADAS 2024</span>
+    <span>+60,000 ESTUDIANTES</span>
+    <span class="up">▲ +10 HRS DE CONTENIDO REAL</span>
+    <span class="amber">⚡ PRECIO DE LANZAMIENTO $29.99</span>
+    <span class="up">▲ VERIFICADO · CHARLES SCHWAB</span>
+    <span>ACCESO DE POR VIDA</span>
+  </div>
 </div>
 
-<section class="section reveal">
-  <div class="section-label">El problema</div>
-  <h2 class="section-title">¿Por qué sigues sin ser rentable?</h2>
-  <p class="section-body">No es falta de disciplina. Es que nunca tuviste acceso a educación de calidad en tu idioma.</p>
-  <div class="problem-grid">
-    <div class="problem-card"><span class="problem-icon">📺</span><div class="problem-title">Videos sin estructura ni orden</div><p class="problem-text">Aprendes un concepto hoy y otro diferente mañana. Sin sistema, sin base, sin progreso real.</p></div>
-    <div class="problem-card"><span class="problem-icon">🌐</span><div class="problem-title">Todo en inglés</div><p class="problem-text">Los mejores cursos están en inglés. Pierdes matices, contexto y tiempo tratando de entender.</p></div>
-    <div class="problem-card"><span class="problem-icon">💸</span><div class="problem-title">Cursos de $500, $1,000, $5,000</div><p class="problem-text">Pagas caro por cursos que no te enseñan más que lo que está disponible gratis — si supieras dónde buscar.</p></div>
-    <div class="problem-card"><span class="problem-icon">📉</span><div class="problem-title">Sin gestión de riesgo real</div><p class="problem-text">Nadie te enseña a proteger tu capital. Y sin eso, ninguna estrategia funciona a largo plazo.</p></div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<section class="instructor-section reveal">
-  <div class="section-label">Tu instructor</div>
-  <h2 class="section-title" style="margin-bottom:32px;">Quién te enseña</h2>
-  <div class="instructor-card">
-    <div class="instructor-photo-wrap">
-      <img class="instructor-photo" src="emmanuel.png" alt="Emmanuel Malyarovich" />
+<!-- ============ STATS ============ -->
+<section>
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat a-up"><b data-count="559" data-prefix="$" data-suffix="K">$0K</b><i>Ganancias verificadas 2024</i></div>
+      <div class="stat a-up"><b data-count="10" data-prefix="+" data-suffix=" HRS">+0 HRS</b><i>De contenido real</i></div>
+      <div class="stat a-up"><b data-count="60" data-prefix="+" data-suffix="K">+0K</b><i>Personas ya lo tomaron</i></div>
+      <div class="stat a-up"><b data-count="29.99" data-prefix="$" data-decimals="2">$0</b><i>Un solo pago</i></div>
     </div>
-    <div class="instructor-info">
-      <div class="instructor-name">Emmanuel Malyarovich</div>
-      <div class="instructor-title">Trader Profesional · +5 años en los mercados</div>
-      <p class="instructor-bio">Emmanuel generó <strong>más de $559,000 en ganancias reales</strong> operando en vivo entre noviembre 2024 y noviembre 2025 — verificado en su cuenta de corretaje de Charles Schwab. Lleva más de 5 años como trader profesional y <strong>nunca ha tenido un mes negativo</strong> en su carrera.<br><br>Su curso completo de +10 horas fue publicado gratis en YouTube. Más de 60,000 personas lo tomaron y lo describieron como <strong>mejor que cursos de $500, $1,000 e incluso $5,000</strong>. Ahora está en español para que puedas aprender sin barreras.</p>
-      <div class="instructor-stats">
-        <div><div class="inst-stat-num">$559K</div><div class="inst-stat-label">Ganancias 2024</div></div>
-        <div><div class="inst-stat-num">+5 años</div><div class="inst-stat-label">En los mercados</div></div>
-        <div><div class="inst-stat-num">+60K</div><div class="inst-stat-label">Estudiantes</div></div>
+  </div>
+</section>
+
+<!-- ============ GIANT STRIP 1 ============ -->
+<div class="strip" aria-hidden="true">
+  <div class="strip-track" data-dir="-1">
+    <b>SIN RODEOS</b><b class="solid">·</b><b>SIN FILTROS</b><b class="solid">·</b><b>SIN EXCUSAS</b><b class="solid">·</b>
+    <b>SIN RODEOS</b><b class="solid">·</b><b>SIN FILTROS</b><b class="solid">·</b><b>SIN EXCUSAS</b><b class="solid">·</b>
+  </div>
+</div>
+
+<!-- ============ PROBLEM ============ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow a-up">El problema</div>
+    <h2 class="split a-up">¿Por qué sigues <span class="ghost">sin ser rentable?</span></h2>
+    <p class="section-sub a-up">No es falta de disciplina. Es que nunca tuviste acceso a educación de calidad en tu idioma.</p>
+    <div class="cards-4">
+      <div class="p-card fly"><span class="tick">▼ SIN SISTEMA</span><h3>Videos sin estructura ni orden</h3><p>Aprendes un concepto hoy y otro diferente mañana. Sin sistema, sin base, sin progreso real.</p></div>
+      <div class="p-card fly"><span class="tick">▼ BARRERA</span><h3>Todo en inglés</h3><p>Los mejores cursos están en inglés. Pierdes matices, contexto y tiempo tratando de entender.</p></div>
+      <div class="p-card fly"><span class="tick">▼ SOBREPRECIO</span><h3>Cursos de $500, $1,000, $5,000</h3><p>Pagas caro por cursos que no te enseñan más que lo que está disponible gratis — si supieras dónde buscar.</p></div>
+      <div class="p-card fly"><span class="tick">▼ RIESGO</span><h3>Sin gestión de riesgo real</h3><p>Nadie te enseña a proteger tu capital. Y sin eso, ninguna estrategia funciona a largo plazo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSTRUCTOR ============ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow a-up">Tu instructor</div>
+    <h2 class="split a-up">Quién te <span class="ghost">enseña</span></h2>
+    <div class="inst" style="margin-top:40px">
+      <div class="inst-photo clip-reveal">
+        <img src="https://tradingsinfiltros.shop/emmanuel.png" alt="Emmanuel Malyarovich" loading="lazy">
+        <div class="badge">EMMANUEL MALYAROVICH<br><span style="color:var(--muted)">Trader Profesional · +5 años</span></div>
+      </div>
+      <div class="inst-text">
+        <p class="fill-text">Emmanuel generó <strong>más de $559,000 en ganancias reales</strong> operando en vivo entre noviembre 2024 y noviembre 2025 — verificado en su cuenta de corretaje de Charles Schwab. Lleva más de 5 años como trader profesional y <strong>nunca ha tenido un mes negativo</strong> en su carrera.</p>
+        <p class="fill-text">Su curso completo de +10 horas fue publicado gratis en YouTube. Más de 60,000 personas lo tomaron y lo describieron como <strong>mejor que cursos de $500, $1,000 e incluso $5,000</strong>. Ahora está en español para que puedas aprender sin barreras.</p>
+        <div class="inst-stats">
+          <div class="chip a-up"><b>$559K</b> · Ganancias 2024</div>
+          <div class="chip a-up"><b>+5 años</b> · En los mercados</div>
+          <div class="chip a-up"><b>+60K</b> · Estudiantes</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="divider"></div>
-
-<section class="section reveal">
-  <div class="section-label">Por qué confiar en este curso</div>
-  <h2 class="section-title">Resultados reales,<br>no promesas</h2>
-  <div class="proof-card-big">
-    <div class="proof-big-num">$559,000</div>
-    <p class="proof-big-text">Emmanuel Malyarovich generó <strong>más de $559,000 en ganancias reales</strong> operando en vivo entre noviembre 2024 y noviembre 2025 — verificado en su cuenta de corretaje de Charles Schwab.</p>
-    <p class="proof-big-text" style="margin-top:12px;">Su curso fue calificado por estudiantes como <strong>mejor que cursos de $500, $1,000 e incluso $5,000</strong>. Nosotros lo tradujimos al español para que por fin puedas aprender sin barreras.</p>
-    <div class="proof-verified"><div class="proof-dot"></div>Ganancias verificadas · Charles Schwab · Think or Swim</div>
+<!-- ============ PROOF (PINNED) ============ -->
+<section class="proof" id="proof">
+  <div class="proof-inner">
+    <div class="eyebrow a-up" style="justify-content:center">Por qué confiar en este curso</div>
+    <div class="big" id="bigNum">$559,000</div>
+    <p class="fill-text">Emmanuel Malyarovich generó <strong>más de $559,000 en ganancias reales</strong> operando en vivo entre noviembre 2024 y noviembre 2025 — verificado en su cuenta de corretaje de Charles Schwab.</p>
+    <p class="fill-text">Su curso fue calificado por estudiantes como <strong>mejor que cursos de $500, $1,000 e incluso $5,000</strong>. Nosotros lo tradujimos al español para que por fin puedas aprender sin barreras.</p>
+    <div class="verify a-up">● GANANCIAS VERIFICADAS · CHARLES SCHWAB · THINK OR SWIM</div>
   </div>
 </section>
 
-<div class="divider"></div>
-
-<section class="section reveal">
-  <div class="section-label">Lo que dicen los estudiantes</div>
-  <h2 class="section-title">Más de 60,000<br>ya lo tomaron</h2>
-  <p class="section-body">Traders de todo el mundo compartieron su experiencia con el curso de Emmanuel.</p>
-  <div class="testimonials-grid">
-    <div class="testimonial-card">
-      <div class="testimonial-platform">YouTube</div>
-      <div class="testimonial-stars">★★★★★</div>
-      <p class="testimonial-text">"Llevo 2 años buscando un curso que realmente explique gestión de riesgo. Este lo hace mejor que cualquier cosa que haya pagado antes. Vale 10 veces el precio."</p>
-      <div class="testimonial-author"><div class="testimonial-avatar" style="background:#2563eb;">CR</div><div><div class="testimonial-name">Carlos R.</div><div class="testimonial-location">Ciudad de México, México</div></div></div>
-    </div>
-    <div class="testimonial-card">
-      <div class="testimonial-platform">YouTube</div>
-      <div class="testimonial-stars">★★★★★</div>
-      <p class="testimonial-text">"Tomé cursos de $1,000 y $2,000 antes de este. Honestamente, Emmanuel explica mejor y va más al grano. El módulo de breakouts cambió mi forma de operar."</p>
-      <div class="testimonial-author"><div class="testimonial-avatar" style="background:#16a34a;">AM</div><div><div class="testimonial-name">Andrés M.</div><div class="testimonial-location">Bogotá, Colombia</div></div></div>
-    </div>
-    <div class="testimonial-card">
-      <div class="testimonial-platform">YouTube</div>
-      <div class="testimonial-stars">★★★★★</div>
-      <p class="testimonial-text">"Por fin un curso en español que no me trata como idiota. Empecé desde cero y en 3 semanas ya estoy haciendo paper trading con una estrategia clara. Increíble."</p>
-      <div class="testimonial-author"><div class="testimonial-avatar" style="background:#dc2626;">LV</div><div><div class="testimonial-name">Lucía V.</div><div class="testimonial-location">Guadalajara, México</div></div></div>
+<!-- ============ TESTIMONIALS ============ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow a-up">Lo que dicen los estudiantes</div>
+    <h2 class="split a-up">Más de 60,000 <span class="ghost">ya lo tomaron</span></h2>
+    <p class="section-sub a-up">Traders de todo el mundo compartieron su experiencia con el curso de Emmanuel.</p>
+    <div class="t-grid">
+      <div class="t-card fly">
+        <div class="t-top"><span class="t-src">YouTube</span><span class="t-stars">★★★★★</span></div>
+        <blockquote>"Llevo 2 años buscando un curso que realmente explique gestión de riesgo. Este lo hace mejor que cualquier cosa que haya pagado antes. Vale 10 veces el precio."</blockquote>
+        <div class="t-who"><div class="t-av">CR</div><div><b>Carlos R.</b><span>Ciudad de México, México</span></div></div>
+      </div>
+      <div class="t-card fly">
+        <div class="t-top"><span class="t-src">YouTube</span><span class="t-stars">★★★★★</span></div>
+        <blockquote>"Tomé cursos de $1,000 y $2,000 antes de este. Honestamente, Emmanuel explica mejor y va más al grano. El módulo de breakouts cambió mi forma de operar."</blockquote>
+        <div class="t-who"><div class="t-av">AM</div><div><b>Andrés M.</b><span>Bogotá, Colombia</span></div></div>
+      </div>
+      <div class="t-card fly">
+        <div class="t-top"><span class="t-src">YouTube</span><span class="t-stars">★★★★★</span></div>
+        <blockquote>"Por fin un curso en español que no me trata como idiota. Empecé desde cero y en 3 semanas ya estoy haciendo paper trading con una estrategia clara. Increíble."</blockquote>
+        <div class="t-who"><div class="t-av">LV</div><div><b>Lucía V.</b><span>Guadalajara, México</span></div></div>
+      </div>
     </div>
   </div>
 </section>
 
-<div class="divider"></div>
-
-<section class="section reveal">
-  <div class="section-label">Contenido del curso</div>
-  <h2 class="section-title">Todo lo que vas<br>a aprender</h2>
-  <p class="section-body">Más de 10 horas de educación organizada de menor a mayor complejidad. Sin relleno.</p>
-  <div class="curriculum-list">
-    <div class="curriculum-item"><div class="curriculum-num">01</div><div class="curriculum-content"><div class="curriculum-title">Fundamentos del trading</div><div class="curriculum-desc">Qué es el trading, diferencia con invertir, tipos de mercados, plataformas recomendadas y tipos de órdenes explicados con ejemplos reales.</div></div><div class="curriculum-tag">Principiante</div></div>
-    <div class="curriculum-item"><div class="curriculum-num">02</div><div class="curriculum-content"><div class="curriculum-title">Lectura de velas japonesas</div><div class="curriculum-desc">Cómo leer candlesticks, identificar topping tails, bottoming tails, doji bars, wide range bars y lo que cada uno te dice sobre compradores y vendedores.</div></div><div class="curriculum-tag">Principiante</div></div>
-    <div class="curriculum-item"><div class="curriculum-num">03</div><div class="curriculum-content"><div class="curriculum-title">Tendencias y medias móviles</div><div class="curriculum-desc">Uptrend, downtrend, sideways. Cómo usar la media móvil de 20 y 200 períodos — las únicas dos que necesitas para operar con ventaja.</div></div><div class="curriculum-tag">Intermedio</div></div>
-    <div class="curriculum-item"><div class="curriculum-num">04</div><div class="curriculum-content"><div class="curriculum-title">Soporte y resistencia</div><div class="curriculum-desc">Cómo identificar niveles clave, usarlos para definir targets, calcular riesgo/recompensa y evitar el error más común de los traders principiantes.</div></div><div class="curriculum-tag">Intermedio</div></div>
-    <div class="curriculum-item"><div class="curriculum-num">05</div><div class="curriculum-content"><div class="curriculum-title">Análisis de múltiples temporalidades</div><div class="curriculum-desc">Por qué operar en una sola temporalidad es operar a ciegas. Cómo alinear el diario, horario, 15 minutos y 5 minutos para aumentar la probabilidad de éxito.</div></div><div class="curriculum-tag">Intermedio</div></div>
-    <div class="curriculum-item"><div class="curriculum-num">06</div><div class="curriculum-content"><div class="curriculum-title">Estrategias: Breakout y Breakdown</div><div class="curriculum-desc">La estrategia favorita de Emmanuel. Cómo identificar bases de alta calidad, entrar correctamente, colocar el stop loss y calcular el tamaño de posición.</div></div><div class="curriculum-tag">Avanzado</div></div>
-    <div class="curriculum-item"><div class="curriculum-num">07</div><div class="curriculum-content"><div class="curriculum-title">Setup de compra y setup de venta</div><div class="curriculum-desc">Cómo comprar el dip correctamente — no al azar. Los 6 criterios específicos que hacen que un retroceso sea de alta calidad. Y cómo aplicarlo en corto.</div></div><div class="curriculum-tag">Avanzado</div></div>
-    <div class="curriculum-item"><div class="curriculum-num">08</div><div class="curriculum-content"><div class="curriculum-title">Patrón 1-2-3 y patrones de agotamiento</div><div class="curriculum-desc">Setups de continuación y reversión. Cómo identificar movimientos climácticos y entrar en reversiones con alta probabilidad.</div></div><div class="curriculum-tag">Avanzado</div></div>
-    <div class="curriculum-item"><div class="curriculum-num">09</div><div class="curriculum-content"><div class="curriculum-title">Gestión de riesgo y sizing de posiciones</div><div class="curriculum-desc">La habilidad más importante. Cómo calcular exactamente cuántas acciones comprar, proteger tu capital y nunca perder más de lo que defines antes de entrar.</div></div><div class="curriculum-tag">Crítico</div></div>
-    <div class="curriculum-item"><div class="curriculum-num">10</div><div class="curriculum-content"><div class="curriculum-title">Trading de gaps y cómo escanear el mercado</div><div class="curriculum-desc">Cómo encontrar las mejores oportunidades cada mañana en menos de 30 minutos. El modelo de gaps que Emmanuel usa todos los días para generar ingresos consistentes.</div></div><div class="curriculum-tag">Avanzado</div></div>
-    <div class="curriculum-item"><div class="curriculum-num">11</div><div class="curriculum-content"><div class="curriculum-title">Plan de trading y psicología</div><div class="curriculum-desc">Cómo construir un plan que elimine las decisiones emocionales. Control de la codicia, el miedo, el revenge trading y cómo pensar como un trader profesional.</div></div><div class="curriculum-tag">Esencial</div></div>
+<!-- ============ GIANT STRIP 2 ============ -->
+<div class="strip" aria-hidden="true">
+  <div class="strip-track" data-dir="1">
+    <b class="solid">+10 HORAS</b><b>·</b><b class="solid">11 MÓDULOS</b><b>·</b><b class="solid">$29.99</b><b>·</b>
+    <b class="solid">+10 HORAS</b><b>·</b><b class="solid">11 MÓDULOS</b><b>·</b><b class="solid">$29.99</b><b>·</b>
   </div>
-</section>
+</div>
 
-<div class="divider"></div>
-
-<section class="section reveal">
-  <div class="section-label">Tu compra incluye</div>
-  <h2 class="section-title">Todo lo que recibes<br>por $29.99</h2>
-  <div class="includes-grid">
-    <div class="include-item"><div class="include-check"></div><div class="include-text">+10 horas de curso completo<span>De principiante a avanzado, en orden</span></div></div>
-    <div class="include-item"><div class="include-check"></div><div class="include-text">Subtítulos profesionales en español<span>Traducción completa, sin errores</span></div></div>
-    <div class="include-item"><div class="include-check"></div><div class="include-text">Acceso de por vida<span>Sin fechas de expiración</span></div></div>
-    <div class="include-item"><div class="include-check"></div><div class="include-text">Un solo pago<span>Sin suscripciones ni renovaciones</span></div></div>
-    <div class="include-item"><div class="include-check"></div><div class="include-text">Acceso inmediato<span>Empieza hoy mismo</span></div></div>
-    <div class="include-item"><div class="include-check"></div><div class="include-text">Garantía de 7 días<span>Reembolso sin preguntas</span></div></div>
+<!-- ============ CURRICULUM (HORIZONTAL SCROLL) ============ -->
+<section class="curr" id="curr">
+  <div class="curr-head">
+    <div class="eyebrow a-up">Contenido del curso</div>
+    <h2 class="split a-up">Todo lo que vas <span class="ghost">a aprender</span></h2>
+    <p class="section-sub a-up" style="margin-bottom:0">Más de 10 horas de educación organizada de menor a mayor complejidad. Sin relleno.</p>
+    <p class="drag-hint" style="padding-left:0">⟵ Sigue deslizando — el curso se mueve contigo ⟶</p>
   </div>
-  <div class="price-justify">El mismo contenido que otros venden por <strong>$500, $1,000 o más</strong>. Lo pusimos a <strong>$29.99</strong> para que el precio nunca sea la excusa. Si no ves el valor en las primeras horas, te devolvemos el dinero — sin preguntas.</div>
-</section>
-
-<div class="divider"></div>
-
-<section class="section reveal">
-  <div class="section-label">Preguntas frecuentes</div>
-  <h2 class="section-title">Todo lo que<br>necesitas saber</h2>
-  <div class="faq-list">
-    <div class="faq-item"><div class="faq-q">¿Necesito experiencia previa para tomar este curso? <span class="faq-arrow">+</span></div><div class="faq-a">No. El curso está diseñado para empezar desde cero. Emmanuel explica cada concepto desde los fundamentos y va aumentando la complejidad de forma gradual. Si ya tienes experiencia, igualmente vas a encontrar valor en las secciones de estrategias avanzadas y gestión de riesgo.</div></div>
-    <div class="faq-item"><div class="faq-q">¿En qué mercados puedo aplicar lo que aprendo? <span class="faq-arrow">+</span></div><div class="faq-a">El curso se enfoca en acciones (stocks), pero los conceptos de price action, medias móviles, gestión de riesgo y psicología aplican a cualquier mercado: crypto, futuros, forex, opciones. El propio Emmanuel lo confirma en el curso.</div></div>
-    <div class="faq-item"><div class="faq-q">¿Cuánto dinero necesito para empezar a operar? <span class="faq-arrow">+</span></div><div class="faq-a">Para day trading de acciones en Estados Unidos, el mínimo recomendado es $25,000 (por la regla PDT). Sin embargo, puedes practicar con paper trading (dinero virtual) mientras aprendes — el curso explica exactamente cómo hacer esto.</div></div>
-    <div class="faq-item"><div class="faq-q">¿Cómo accedo al curso después de pagar? <span class="faq-arrow">+</span></div><div class="faq-a">Inmediatamente después de tu compra recibirás un email de confirmación con el enlace de descarga del curso. Acceso inmediato desde cualquier dispositivo — computadora, celular o tablet.</div></div>
-    <div class="faq-item"><div class="faq-q">¿Tiene garantía de devolución? <span class="faq-arrow">+</span></div><div class="faq-a">Sí. Tienes 7 días desde tu compra para solicitar un reembolso completo, sin necesidad de dar explicaciones.</div></div>
-    <div class="faq-item"><div class="faq-q">¿Por qué $29.99 si el curso original es gratis en YouTube? <span class="faq-arrow">+</span></div><div class="faq-a">El curso original está en inglés. Nosotros hicimos la traducción profesional al español, la sincronización de subtítulos y la organización del contenido para que sea accesible en una sola plataforma, en orden, sin interrupciones de anuncios. Pagas por el acceso organizado y en tu idioma — no por el contenido en sí.</div></div>
-  </div>
-</section>
-
-<section class="final-cta reveal">
-  <div class="section-label" style="text-align:center;">Empieza hoy</div>
-  <h2 class="section-title" style="text-align:center;font-size:clamp(40px,7vw,72px);">Sin excusas.<br>Sin barreras de idioma.</h2>
-  <div class="price-old">Antes $199.99</div>
-  <div class="final-price">$29.99</div>
-  <p class="price-justify-cta">El mismo contenido que otros venden por <strong>$500 o más</strong>. A $29.99 para que el precio nunca sea la excusa.</p>
-  <p class="final-sub">Pago único · Acceso de por vida · Garantía de 7 días</p>
-  <a href="https://tradingfiltro.gumroad.com/l/nvabof?wanted=true" class="btn-primary" target="_blank" style="font-size:16px;padding:18px 48px;" onclick="fbq('track','InitiateCheckout');">Obtener acceso ahora</a>
-  <br>
-  <div class="guarantee-badge" style="margin-top:24px;">
-    <div class="guarantee-icon">🛡️</div>
-    <div>
-      <div class="guarantee-title">Garantía de 7 días sin preguntas</div>
-      <div class="guarantee-sub">Si no te gusta, te devolvemos el dinero completo.</div>
+  <div class="curr-pin">
+    <div class="curr-track" id="currTrack">
+      <div class="m-card" data-num="01"><div class="m-top"><span class="m-num">MOD 01</span><span class="lvl beg">Principiante</span></div><h3>Fundamentos del trading</h3><p>Qué es el trading, diferencia con invertir, tipos de mercados, plataformas recomendadas y tipos de órdenes explicados con ejemplos reales.</p></div>
+      <div class="m-card" data-num="02"><div class="m-top"><span class="m-num">MOD 02</span><span class="lvl beg">Principiante</span></div><h3>Lectura de velas japonesas</h3><p>Cómo leer candlesticks, identificar topping tails, bottoming tails, doji bars, wide range bars y lo que cada uno te dice sobre compradores y vendedores.</p></div>
+      <div class="m-card" data-num="03"><div class="m-top"><span class="m-num">MOD 03</span><span class="lvl mid">Intermedio</span></div><h3>Tendencias y medias móviles</h3><p>Uptrend, downtrend, sideways. Cómo usar la media móvil de 20 y 200 períodos — las únicas dos que necesitas para operar con ventaja.</p></div>
+      <div class="m-card" data-num="04"><div class="m-top"><span class="m-num">MOD 04</span><span class="lvl mid">Intermedio</span></div><h3>Soporte y resistencia</h3><p>Cómo identificar niveles clave, usarlos para definir targets, calcular riesgo/recompensa y evitar el error más común de los traders principiantes.</p></div>
+      <div class="m-card" data-num="05"><div class="m-top"><span class="m-num">MOD 05</span><span class="lvl mid">Intermedio</span></div><h3>Análisis de múltiples temporalidades</h3><p>Por qué operar en una sola temporalidad es operar a ciegas. Cómo alinear el diario, horario, 15 minutos y 5 minutos para aumentar la probabilidad de éxito.</p></div>
+      <div class="m-card" data-num="06"><div class="m-top"><span class="m-num">MOD 06</span><span class="lvl adv">Avanzado</span></div><h3>Estrategias: Breakout y Breakdown</h3><p>La estrategia favorita de Emmanuel. Cómo identificar bases de alta calidad, entrar correctamente, colocar el stop loss y calcular el tamaño de posición.</p></div>
+      <div class="m-card" data-num="07"><div class="m-top"><span class="m-num">MOD 07</span><span class="lvl adv">Avanzado</span></div><h3>Setup de compra y setup de venta</h3><p>Cómo comprar el dip correctamente — no al azar. Los 6 criterios específicos que hacen que un retroceso sea de alta calidad. Y cómo aplicarlo en corto.</p></div>
+      <div class="m-card" data-num="08"><div class="m-top"><span class="m-num">MOD 08</span><span class="lvl adv">Avanzado</span></div><h3>Patrón 1-2-3 y patrones de agotamiento</h3><p>Setups de continuación y reversión. Cómo identificar movimientos climácticos y entrar en reversiones con alta probabilidad.</p></div>
+      <div class="m-card" data-num="09"><div class="m-top"><span class="m-num">MOD 09</span><span class="lvl crit">Crítico</span></div><h3>Gestión de riesgo y sizing de posiciones</h3><p>La habilidad más importante. Cómo calcular exactamente cuántas acciones comprar, proteger tu capital y nunca perder más de lo que defines antes de entrar.</p></div>
+      <div class="m-card" data-num="10"><div class="m-top"><span class="m-num">MOD 10</span><span class="lvl adv">Avanzado</span></div><h3>Trading de gaps y cómo escanear el mercado</h3><p>Cómo encontrar las mejores oportunidades cada mañana en menos de 30 minutos. El modelo de gaps que Emmanuel usa todos los días para generar ingresos consistentes.</p></div>
+      <div class="m-card" data-num="11"><div class="m-top"><span class="m-num">MOD 11</span><span class="lvl crit">Esencial</span></div><h3>Plan de trading y psicología</h3><p>Cómo construir un plan que elimine las decisiones emocionales. Control de la codicia, el miedo, el revenge trading y cómo pensar como un trader profesional.</p></div>
     </div>
   </div>
-  <br>
-  <div class="guarantee"><span>🔒</span>Pago seguro procesado por Gumroad</div>
+  <div class="curr-progress"><i id="currBar"></i></div>
+  <div style="height:clamp(60px,8vw,100px)"></div>
 </section>
+
+<!-- ============ INCLUDES ============ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow a-up">Tu compra incluye</div>
+    <h2 class="split a-up">Todo lo que recibes <span class="ghost">por $29.99</span></h2>
+    <div class="inc-grid" style="margin-top:42px">
+      <div class="inc a-left"><span class="ok">✓</span><div><b>+10 horas de curso completo</b><span>De principiante a avanzado, en orden</span></div></div>
+      <div class="inc a-right"><span class="ok">✓</span><div><b>Subtítulos profesionales en español</b><span>Traducción completa, sin errores</span></div></div>
+      <div class="inc a-left"><span class="ok">✓</span><div><b>Acceso de por vida</b><span>Sin fechas de expiración</span></div></div>
+      <div class="inc a-right"><span class="ok">✓</span><div><b>Un solo pago</b><span>Sin suscripciones ni renovaciones</span></div></div>
+      <div class="inc a-left"><span class="ok">✓</span><div><b>Acceso inmediato</b><span>Empieza hoy mismo</span></div></div>
+      <div class="inc a-right"><span class="ok">✓</span><div><b>Garantía de 7 días</b><span>Reembolso sin preguntas</span></div></div>
+    </div>
+    <div class="inc-note a-up">El mismo contenido que otros venden por <strong>$500, $1,000 o más</strong>. Lo pusimos a <strong>$29.99</strong> para que el precio nunca sea la excusa. Si no ves el valor en las primeras horas, te devolvemos el dinero — sin preguntas.</div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow a-up">Preguntas frecuentes</div>
+    <h2 class="split a-up">Todo lo que <span class="ghost">necesitas saber</span></h2>
+    <div class="faq" style="margin-top:42px">
+      <details class="a-up"><summary>¿Necesito experiencia previa para tomar este curso?<span class="plus">+</span></summary><div class="ans">No. El curso está diseñado para empezar desde cero. Emmanuel explica cada concepto desde los fundamentos y va aumentando la complejidad de forma gradual. Si ya tienes experiencia, igualmente vas a encontrar valor en las secciones de estrategias avanzadas y gestión de riesgo.</div></details>
+      <details class="a-up"><summary>¿En qué mercados puedo aplicar lo que aprendo?<span class="plus">+</span></summary><div class="ans">El curso se enfoca en acciones (stocks), pero los conceptos de price action, medias móviles, gestión de riesgo y psicología aplican a cualquier mercado: crypto, futuros, forex, opciones. El propio Emmanuel lo confirma en el curso.</div></details>
+      <details class="a-up"><summary>¿Cuánto dinero necesito para empezar a operar?<span class="plus">+</span></summary><div class="ans">Para day trading de acciones en Estados Unidos, el mínimo recomendado es $25,000 (por la regla PDT). Sin embargo, puedes practicar con paper trading (dinero virtual) mientras aprendes — el curso explica exactamente cómo hacer esto.</div></details>
+      <details class="a-up"><summary>¿Cómo accedo al curso después de pagar?<span class="plus">+</span></summary><div class="ans">Inmediatamente después de tu compra recibirás un email de confirmación con el enlace de descarga del curso. Acceso inmediato desde cualquier dispositivo — computadora, celular o tablet.</div></details>
+      <details class="a-up"><summary>¿Tiene garantía de devolución?<span class="plus">+</span></summary><div class="ans">Sí. Tienes 7 días desde tu compra para solicitar un reembolso completo, sin necesidad de dar explicaciones.</div></details>
+      <details class="a-up"><summary>¿Por qué $29.99 si el curso original es gratis en YouTube?<span class="plus">+</span></summary><div class="ans">El curso original está en inglés. Nosotros hicimos la traducción profesional al español, la sincronización de subtítulos y la organización del contenido para que sea accesible en una sola plataforma, en orden, sin interrupciones de anuncios. Pagas por el acceso organizado y en tu idioma — no por el contenido en sí.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL ============ -->
+<section class="final">
+  <div class="wrap">
+    <div class="eyebrow a-up" style="justify-content:center">Empieza hoy</div>
+    <h2 class="split a-up">Sin excusas.<br><span class="ghost">Sin barreras de idioma.</span></h2>
+    <div class="price-row">
+      <span class="price-old a-up">Antes $199.99</span>
+      <span class="price-now a-scale" id="finalPrice">$29.99</span>
+    </div>
+    <p class="a-up">El mismo contenido que otros venden por <strong>$500 o más</strong>. A $29.99 para que el precio nunca sea la excusa.</p>
+    <p class="terms a-up">Pago único · Acceso de por vida · Garantía de 7 días</p>
+    <a class="cta-main a-scale" href="https://tradingfiltro.gumroad.com/l/nvabof?wanted=true">Obtener acceso ahora <span class="arrow">→</span></a>
+    <br>
+    <div class="guarantee a-up">
+      <span class="shield">🛡️</span>
+      <div><b>Garantía de 7 días sin preguntas</b><span>Si no te gusta, te devolvemos el dinero completo.</span></div>
+    </div>
+    <p class="secure a-up">🔒 Pago seguro procesado por Gumroad</p>
+  </div>
+</section>
+
+</div><!-- /#page -->
 
 <footer>
-  <p>Trading Sin Filtros · Todos los derechos reservados © 2025</p>
-  <p style="margin-top:4px;">Este curso contiene subtítulos en español del contenido original en inglés de Emmanuel Malyarovich.</p>
-  <p style="margin-top:4px;">Los resultados mostrados son reales pero no garantizan resultados similares. El trading implica riesgo de pérdida de capital.</p>
+  <p>Trading Sin Filtros · Todos los derechos reservados © 2025<br>
+  Este curso contiene subtítulos en español del contenido original en inglés de Emmanuel Malyarovich.<br>
+  Los resultados mostrados son reales pero no garantizan resultados similares. El trading implica riesgo de pérdida de capital.</p>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>
-  const stickyBar=document.getElementById('stickyBar');
-  window.addEventListener('scroll',()=>{stickyBar.classList.toggle('visible',window.scrollY>500)});
-  const reveals=document.querySelectorAll('.reveal');
-  const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}})},{threshold:0.1});
-  reveals.forEach(el=>observer.observe(el));
-  document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{const item=q.parentElement;const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!isOpen)item.classList.add('open')})});
+(function(){
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const hasGsap = typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined';
+  if (hasGsap) gsap.registerPlugin(ScrollTrigger);
+
+  /* ================= candlestick canvas ================= */
+  const cv=document.getElementById('candles');
+  if(cv && !reduced){
+    const ctx=cv.getContext('2d');
+    let W,H,candles=[],price=100,t=0;
+    const CW=14,GAP=8,STEP=CW+GAP;
+    function resize(){W=cv.width=cv.offsetWidth*devicePixelRatio;H=cv.height=cv.offsetHeight*devicePixelRatio}
+    resize();addEventListener('resize',resize);
+    function newCandle(){
+      const o=price,d=(Math.random()-.44)*4,c=o+d;
+      candles.push({o,c,hi:Math.max(o,c)+Math.random()*2.2,lo:Math.min(o,c)-Math.random()*2.2,age:0});
+      price=c;
+      const maxN=Math.ceil(W/(STEP*devicePixelRatio))+4;
+      if(candles.length>maxN)candles.shift();
+    }
+    for(let i=0;i<80;i++)newCandle();
+    let last=0;
+    (function draw(now){
+      requestAnimationFrame(draw);
+      if(now-last>700){newCandle();last=now}
+      t+=.012;ctx.clearRect(0,0,W,H);
+      const vals=candles.flatMap(k=>[k.hi,k.lo]);
+      const min=Math.min(...vals),max=Math.max(...vals),pad=(max-min)*.25||1;
+      const y=v=>H-((v-(min-pad))/((max-min)+pad*2))*H;
+      const s=devicePixelRatio;
+      candles.forEach((k,i)=>{
+        const x=W-(candles.length-i)*STEP*s+Math.sin(t)*2;
+        const col=k.c>=k.o?'rgba(22,199,132,':'rgba(234,57,67,';
+        k.age=Math.min(k.age+.04,1);const a=k.age;
+        ctx.strokeStyle=col+(.55*a)+')';ctx.lineWidth=1.4*s;
+        ctx.beginPath();ctx.moveTo(x+CW*s/2,y(k.hi));ctx.lineTo(x+CW*s/2,y(k.lo));ctx.stroke();
+        ctx.fillStyle=col+(.8*a)+')';
+        ctx.fillRect(x,Math.min(y(k.o),y(k.c)),CW*s,Math.max(Math.abs(y(k.c)-y(k.o)),2*s));
+      });
+      ctx.beginPath();ctx.strokeStyle='rgba(22,199,132,.5)';ctx.lineWidth=2*s;
+      ctx.shadowColor='rgba(22,199,132,.9)';ctx.shadowBlur=16*s;
+      candles.forEach((k,i)=>{const x=W-(candles.length-i)*STEP*s+CW*s/2;i?ctx.lineTo(x,y(k.c)):ctx.moveTo(x,y(k.c))});
+      ctx.stroke();ctx.shadowBlur=0;
+    })(0);
+  }
+
+  /* ================= helpers ================= */
+  function splitChars(el){
+    el.querySelectorAll('.ln, .ghost').forEach(seg=>{
+      const txt=seg.textContent;seg.textContent='';
+      [...txt].forEach(ch=>{
+        const s=document.createElement('span');
+        s.className='char';s.innerHTML=ch===' '?'&nbsp;':ch;
+        seg.appendChild(s);
+      });
+    });
+    if(!el.querySelector('.ln') && !el.querySelector('.ghost')) return;
+  }
+  function splitH2(el){
+    // wrap direct text nodes + ghost spans into chars
+    const nodes=[...el.childNodes];
+    nodes.forEach(n=>{
+      if(n.nodeType===3 && n.textContent.trim()){
+        const frag=document.createDocumentFragment();
+        [...n.textContent].forEach(ch=>{
+          const s=document.createElement('span');s.className='char';
+          s.innerHTML=ch===' '?'&nbsp;':ch;frag.appendChild(s);
+        });
+        el.replaceChild(frag,n);
+      } else if(n.nodeType===1 && n.classList.contains('ghost')){
+        const txt=n.textContent;n.textContent='';
+        [...txt].forEach(ch=>{
+          const s=document.createElement('span');s.className='char';
+          s.innerHTML=ch===' '?'&nbsp;':ch;n.appendChild(s);
+        });
+      }
+    });
+  }
+  function splitWords(el){
+    const walk=node=>{
+      [...node.childNodes].forEach(n=>{
+        if(n.nodeType===3 && n.textContent.trim()){
+          const frag=document.createDocumentFragment();
+          n.textContent.split(/(\s+)/).forEach(w=>{
+            if(!w)return;
+            if(/^\s+$/.test(w)){frag.appendChild(document.createTextNode(w));return}
+            const s=document.createElement('span');s.className='word';s.textContent=w;frag.appendChild(s);
+          });
+          node.replaceChild(frag,n);
+        } else if(n.nodeType===1) walk(n);
+      });
+    };
+    walk(el);
+  }
+
+  /* ================= fallback if GSAP fails / reduced motion ================= */
+  function bail(){
+    document.getElementById('loader').remove();
+    document.querySelector('nav').style.transform='none';
+    document.querySelectorAll('.a-up,.a-left,.a-right,.a-scale,.hero-badge,.hero-sub,.hero .cta-main,.hero-note,.hero-flash,.scroll-hint,.fly')
+      .forEach(el=>{el.style.opacity=1;el.style.transform='none'});
+    document.querySelectorAll('.fill-text').forEach(el=>el.style.color='var(--muted)');
+    document.querySelectorAll('[data-count]').forEach(el=>{
+      const d=parseInt(el.dataset.decimals||'0');
+      el.textContent=(el.dataset.prefix||'')+(d?(+el.dataset.count).toFixed(d):el.dataset.count)+(el.dataset.suffix||'');
+    });
+    // simple ticker fallback
+    const tk=document.getElementById('ticker');
+    if(tk) tk.style.cssText+='animation:marqF 28s linear infinite';
+    const st=document.createElement('style');
+    st.textContent='@keyframes marqF{from{transform:translateX(0)}to{transform:translateX(-50%)}}';
+    document.head.appendChild(st);
+    // scroll progress still works
+    addEventListener('scroll',()=>{
+      const h=document.documentElement;
+      document.getElementById('progress').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+    },{passive:true});
+  }
+  if(!hasGsap || reduced){ bail(); hookPixel(); return; }
+
+  /* ================= split text ================= */
+  document.querySelectorAll('.hero h1').forEach(splitChars);
+  document.querySelectorAll('h2.split').forEach(splitH2);
+  document.querySelectorAll('.fill-text').forEach(splitWords);
+
+  /* ================= PRELOADER → intro timeline ================= */
+  const lp=document.getElementById('lPrice'), lb=document.getElementById('lBar');
+  const intro=gsap.timeline();
+  intro
+    .to('#loader .l-logo',{opacity:1,duration:.4,ease:'power2.out'})
+    .to(lb,{width:'100%',duration:1.1,ease:'power2.inOut'},0)
+    .to({v:0},{v:29.99,duration:1.1,ease:'power2.inOut',
+        onUpdate:function(){lp.textContent='$'+this.targets()[0].v.toFixed(2)}},0)
+    .to('#loader',{yPercent:-100,duration:.7,ease:'power4.inOut'},1.35)
+    .from('.hero h1 .char',{yPercent:120,rotateX:-40,opacity:0,duration:.9,stagger:.028,ease:'back.out(1.6)'},1.55)
+    .to('.hero-badge',{opacity:1,y:0,duration:.6,ease:'power2.out'},1.8)
+    .to('.hero-sub',{opacity:1,duration:.7,ease:'power2.out'},2.1)
+    .to('.hero .cta-main',{opacity:1,duration:.6,ease:'power2.out'},2.3)
+    .to('.hero-note',{opacity:1,duration:.5},2.45)
+    .to('.hero-flash',{opacity:1,duration:.5},2.55)
+    .to('.scroll-hint',{opacity:1,duration:.6},2.7)
+    .to('nav',{y:0,duration:.7,ease:'power3.out'},2.2);
+  gsap.set('.hero h1 .char',{transformOrigin:'50% 100%'});
+
+  /* ================= hero parallax out ================= */
+  gsap.to('.hero-inner',{
+    yPercent:-28,opacity:0,scale:.94,ease:'none',
+    scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}
+  });
+  gsap.to('#candles',{
+    yPercent:18,opacity:.15,ease:'none',
+    scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}
+  });
+
+  /* ================= scroll progress ================= */
+  gsap.to('#progress',{width:'100%',ease:'none',
+    scrollTrigger:{trigger:document.body,start:'top top',end:'max',scrub:.3}});
+
+  /* ================= velocity skew on whole page ================= */
+  const skewTo=gsap.quickTo('#page','skewY',{duration:.5,ease:'power3'});
+  ScrollTrigger.create({
+    onUpdate(self){
+      const v=gsap.utils.clamp(-6,6,self.getVelocity()/-350);
+      skewTo(v);
+      if(Math.abs(v)<.05)skewTo(0);
+    }
+  });
+
+  /* ================= ticker: velocity-reactive loop ================= */
+  const tickerTween=gsap.to('#ticker',{xPercent:-50,repeat:-1,duration:26,ease:'none'});
+  ScrollTrigger.create({
+    onUpdate(self){
+      const boost=gsap.utils.clamp(1,8,1+Math.abs(self.getVelocity())/600);
+      gsap.to(tickerTween,{timeScale:boost*(self.direction||1),duration:.4,overwrite:true});
+    }
+  });
+
+  /* ================= giant strips scrub with scroll ================= */
+  document.querySelectorAll('.strip-track').forEach(track=>{
+    const dir=+track.dataset.dir||-1;
+    gsap.fromTo(track,{xPercent:dir>0?-30:0},{xPercent:dir>0?0:-30,ease:'none',
+      scrollTrigger:{trigger:track.parentElement,start:'top bottom',end:'bottom top',scrub:true}});
+  });
+
+  /* ================= generic directional reveals ================= */
+  gsap.utils.toArray('.a-up').forEach(el=>{
+    gsap.to(el,{opacity:1,y:0,duration:1,ease:'power3.out',
+      scrollTrigger:{trigger:el,start:'top 88%'}});
+  });
+  gsap.utils.toArray('.a-left').forEach(el=>{
+    gsap.to(el,{opacity:1,x:0,duration:1,ease:'power3.out',
+      scrollTrigger:{trigger:el,start:'top 90%'}});
+  });
+  gsap.utils.toArray('.a-right').forEach(el=>{
+    gsap.to(el,{opacity:1,x:0,duration:1,ease:'power3.out',
+      scrollTrigger:{trigger:el,start:'top 90%'}});
+  });
+  gsap.utils.toArray('.a-scale').forEach(el=>{
+    gsap.to(el,{opacity:1,scale:1,duration:1.1,ease:'elastic.out(1,.6)',
+      scrollTrigger:{trigger:el,start:'top 88%'}});
+  });
+
+  /* ================= h2 char cascade on scroll ================= */
+  gsap.utils.toArray('h2.split').forEach(h=>{
+    const chars=h.querySelectorAll('.char');
+    gsap.set(chars,{yPercent:110,opacity:0});
+    ScrollTrigger.create({
+      trigger:h,start:'top 85%',once:true,
+      onEnter:()=>gsap.to(chars,{yPercent:0,opacity:1,duration:.8,stagger:.018,ease:'back.out(1.7)'})
+    });
+  });
+
+  /* ================= problem/testimonial cards: alternating 3D fly-in, scrubbed ================= */
+  gsap.utils.toArray('.fly').forEach((card,i)=>{
+    const fromX=i%2? 120:-120;
+    gsap.fromTo(card,
+      {opacity:0,x:fromX,rotateY:fromX>0?18:-18,rotateZ:fromX>0?3:-3},
+      {opacity:1,x:0,rotateY:0,rotateZ:0,ease:'power2.out',
+       scrollTrigger:{trigger:card,start:'top 100%',end:'top 60%',scrub:1}});
+  });
+
+  /* ================= stats: count-up + underline ================= */
+  gsap.utils.toArray('.stat').forEach(stat=>{
+    const b=stat.querySelector('[data-count]');
+    ScrollTrigger.create({
+      trigger:stat,start:'top 85%',once:true,
+      onEnter(){
+        gsap.fromTo(stat,{boxShadow:'inset 0 -2px 0 rgba(22,199,132,0)'},
+          {boxShadow:'inset 0 -2px 0 rgba(22,199,132,1)',duration:.9,delay:.4});
+        const end=parseFloat(b.dataset.count),pre=b.dataset.prefix||'',suf=b.dataset.suffix||'',dec=parseInt(b.dataset.decimals||'0');
+        gsap.to({v:0},{v:end,duration:1.6,ease:'power4.out',
+          onUpdate:function(){const v=this.targets()[0].v;b.textContent=pre+(dec?v.toFixed(dec):Math.round(v))+suf}});
+      }
+    });
+  });
+
+  /* ================= image clip reveal + parallax ================= */
+  gsap.utils.toArray('.clip-reveal').forEach(el=>{
+    gsap.fromTo(el,{clipPath:'inset(100% 0 0 0)'},{clipPath:'inset(0% 0 0 0)',duration:1.2,ease:'power4.inOut',
+      scrollTrigger:{trigger:el,start:'top 85%',once:true}});
+    const img=el.querySelector('img');
+    if(img) gsap.fromTo(img,{yPercent:-10,scale:1.15},{yPercent:10,scale:1.15,ease:'none',
+      scrollTrigger:{trigger:el,start:'top bottom',end:'bottom top',scrub:true}});
+  });
+
+  /* ================= word-fill paragraphs (scrub) ================= */
+  gsap.utils.toArray('.fill-text').forEach(p=>{
+    const words=p.querySelectorAll('.word');
+    gsap.to(words,{color:'#E9EEF6',stagger:.06,ease:'none',
+      scrollTrigger:{trigger:p,start:'top 85%',end:'top 35%',scrub:true}});
+  });
+
+  /* ================= PROOF: pinned, $559,000 scales + lights up + counts ================= */
+  const big=document.getElementById('bigNum');
+  const proofTl=gsap.timeline({
+    scrollTrigger:{trigger:'#proof',start:'top top',end:'+=150%',pin:true,pinReparent:true,scrub:1}
+  });
+  proofTl
+    .fromTo(big,{scale:.45,opacity:.35},{scale:1,opacity:1,ease:'power2.out',duration:1})
+    .add(()=>big.classList.add('lit'))
+    .to(big,{scale:1.06,duration:.4})
+    .to(big,{scale:1,duration:.3});
+  // count the number while pinned
+  ScrollTrigger.create({
+    trigger:'#proof',start:'top top',end:'+=150%',scrub:true,
+    onUpdate(self){
+      const v=Math.round(self.progress*559000);
+      big.textContent='$'+v.toLocaleString('en-US');
+      if(self.progress>.55)big.classList.add('lit');else big.classList.remove('lit');
+    }
+  });
+
+  /* ================= CURRICULUM: pinned horizontal scroll ================= */
+  const track=document.getElementById('currTrack');
+  const pinWrap=document.querySelector('.curr-pin');
+  function hScroll(){
+    const dist=track.scrollWidth-window.innerWidth;
+    gsap.to(track,{x:-dist,ease:'none',
+      scrollTrigger:{
+        trigger:pinWrap,start:'top 12%',end:'+='+dist,pin:true,pinReparent:true,scrub:1,
+        invalidateOnRefresh:true,
+        onUpdate(self){document.getElementById('currBar').style.width=(self.progress*100)+'%'}
+      }});
+    // cards tilt as they travel
+    gsap.utils.toArray('.m-card').forEach(card=>{
+      gsap.fromTo(card,{rotateZ:2,y:30},{rotateZ:0,y:0,ease:'none',
+        scrollTrigger:{trigger:pinWrap,start:'top 12%',end:'+='+dist,scrub:1.5}});
+    });
+  }
+  hScroll();
+
+  /* ================= final price pop ================= */
+  gsap.fromTo('#finalPrice',{scale:.5,rotateZ:-6},{scale:1,rotateZ:0,ease:'elastic.out(1,.45)',duration:1.2,
+    scrollTrigger:{trigger:'.final',start:'top 60%',once:true}});
+
+  /* ================= cursor glow ================= */
+  if(matchMedia('(pointer:fine)').matches){
+    const glow=document.getElementById('cursor-glow');
+    const gx=gsap.quickTo(glow,'left',{duration:.6,ease:'power3'}),
+          gy=gsap.quickTo(glow,'top',{duration:.6,ease:'power3'});
+    addEventListener('mousemove',e=>{gx(e.clientX);gy(e.clientY)},{passive:true});
+    /* 3D tilt on cards */
+    document.querySelectorAll('.p-card,.t-card,.m-card').forEach(card=>{
+      card.addEventListener('mousemove',e=>{
+        const r=card.getBoundingClientRect();
+        gsap.to(card,{rotateX:((e.clientY-r.top)/r.height-.5)*-7,rotateY:((e.clientX-r.left)/r.width-.5)*7,
+          y:-6,transformPerspective:800,duration:.4,overwrite:'auto'});
+      });
+      card.addEventListener('mouseleave',()=>gsap.to(card,{rotateX:0,rotateY:0,y:0,duration:.6,ease:'power3.out'}));
+    });
+  }
+
+  /* ================= magnetic CTA ================= */
+  document.querySelectorAll('.cta-main').forEach(btn=>{
+    btn.addEventListener('mousemove',e=>{
+      const r=btn.getBoundingClientRect();
+      gsap.to(btn,{x:(e.clientX-r.left-r.width/2)*.25,y:(e.clientY-r.top-r.height/2)*.35,duration:.4});
+    });
+    btn.addEventListener('mouseleave',()=>gsap.to(btn,{x:0,y:0,duration:.6,ease:'elastic.out(1,.4)'}));
+  });
+
+  addEventListener('load',()=>ScrollTrigger.refresh());
+  hookPixel();
+
+  /* ================= pixel ================= */
+  function hookPixel(){
+    document.querySelectorAll('a[href*="gumroad"]').forEach(a=>{
+      a.addEventListener('click',()=>{if(window.fbq)fbq('track','InitiateCheckout',{value:29.99,currency:'USD'})});
+    });
+  }
+})();
 </script>
 </body>
 </html>
